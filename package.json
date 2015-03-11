@@ -9,12 +9,12 @@
                 {   
                     "name"          : "api_name",
                     "description"   : "Apex Trigger API Name",
-                    "default"       : "MyCoolTrigger"
+                    "default"       : "ApiName"
                 },
                 {   
                     "name"          : "object_name",
                     "description"   : "Object API Name",
-                    "default"       : "Account"
+                    "default"       : "Object"
                 }
                 
            ]
@@ -23,42 +23,42 @@
     "ApexClass" :  [
         {
             "name"          : "NSL Trigger Handler",
-            "file_name"     : "NSLTriggerHandler.cls",
+            "file_name"     : "TriggerHandler.cls",
             "description"   : "NSL Trigger Handler template",
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
                     "name"          : "api_name",
                     "description"   : "Class Name",
-                    "default"       : "TriggerHandler"
+                    "default"       : "[trig]TriggerHandler"
                 },
                 {   
                     "name"          : "trigger_name",
                     "description"   : "Trigger API Name",
-                    "default"       : "Account"
+                    "default"       : "TriggerName"
                 }
            ]
         },
         {
             "name"          : "NSL Before Class",
-            "file_name"     : "NSLBeforeClass.cls",
+            "file_name"     : "BeforeClass.cls",
             "description"   : "NSL Before Class template",
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
                     "name"          : "object_name",
                     "description"   : "Object",
-                    "default"       : "Account"
+                    "default"       : "Object"
                 },
                 {   
                     "name"          : "api_name",
                     "description"   : "Trigger API Name",
-                    "default"       : "Before"
+                    "default"       : "[trig]Before"
                 },
                 {
                     "name"          : "obj_var",
                     "description"   : "3 Letter Variable for loop",
-                    "default"       : "CurrentMCT"
+                    "default"       : "Variable"
                 },
                 {
                     "name"          : "cur",
@@ -74,24 +74,24 @@
         },
         {
             "name"          : "NSL After Class",
-            "file_name"     : "NSLAfterClass.cls",
+            "file_name"     : "AfterClass.cls",
             "description"   : "NSL After Class template",
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
                     "name"          : "object_name",
                     "description"   : "Object API Name",
-                    "default"       : "Account"
+                    "default"       : "Object"
                 },
                 {   
                     "name"          : "api_name",
                     "description"   : "Already created Trigger API Name",
-                    "default"       : "After"
+                    "default"       : "[trig]After"
                 },
                 {
                     "name"          : "obj_var",
                     "description"   : "Variable for Trigger.new loop",
-                    "default"       : "CurrentMCT"
+                    "default"       : "Variable"
                 },
                 {
                     "name"          : "cur",
@@ -102,6 +102,104 @@
                     "name"          : "old",
                     "description"   : "Do not edit",
                     "default"       : "Old"
+                }
+           ]
+        },
+        {
+            "name"          : "NSL Public with Constructor",
+            "file_name"     : "PublicWithConstructor.cls",
+            "description"   : "NSL Public with Constructor Class",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                }
+           ]
+        },
+        {
+            "name"          : "NSL Public No Constructor",
+            "file_name"     : "PublicNoConstructor.cls",
+            "description"   : "NSL Public with No Constructor Class",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                }
+           ]
+        },
+        {
+            "name"          : "NSL Controller Extension",
+            "file_name"     : "ControllerExtension.cls",
+            "description"   : "Controller Extension Class",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                },
+                {   
+                    "name"          : "sobj",
+                    "description"   : "SObject API",
+                    "default"       : "Object"
+                },
+                {   
+                    "name"          : "obj_var",
+                    "description"   : "Object Variable",
+                    "default"       : "Variable"
+                }
+           ]
+        },
+        {
+            "name"          : "NSL Schedulable Class",
+            "file_name"     : "SchedulableClass.cls",
+            "description"   : "NSL Public with No Constructor Class",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                }
+           ]
+        },
+        {
+            "name"          : "NSL Unit Test Class",
+            "file_name"     : "UnitTest.cls",
+            "description"   : "NSL Test Method Class",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                }
+           ]
+        },
+        {
+            "name"          : "NSL Batchable Class",
+            "file_name"     : "BatchClass.cls",
+            "description"   : "Batchable Class",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                },
+                {   
+                    "name"          : "sobj",
+                    "description"   : "SObject API",
+                    "default"       : "Object"
+                },
+                {   
+                    "name"          : "obj_var",
+                    "description"   : "Object Variable",
+                    "default"       : "Variable"
                 }
            ]
         }
