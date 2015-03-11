@@ -4,8 +4,8 @@ global class {{ api_name }} implements Schedulable {
 		executeLogic();
 	}
 
-	@webService
-	global static void {{ api_name }}buttonMethod(){
+	
+	webservice static void {{ api_name }}buttonMethod(){
 		executeLogic();
 	}
 
