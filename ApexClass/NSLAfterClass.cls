@@ -38,7 +38,7 @@ public class {{ api_name }} {
       for({{ object_name }} {{ cur }}{{ obj_var }} : (List<{{ object_name }}>)Trigger.new) {
         {{ object_name }} {{ old }}{{ obj_var }} = null;
         if(Trigger.isUpdate)
-          {{ old }}{{ obj_var } = ({{ object_name }})Trigger.OldMap.get({{ cur }}{{ obj_var }}.Id) ;
+          {{ old }}{{ obj_var }} = ({{ object_name }})Trigger.OldMap.get({{ cur }}{{ obj_var }}.Id) ;
                 
                 
       }// For records of trigger - set up variables that control queries
