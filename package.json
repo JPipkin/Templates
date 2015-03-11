@@ -2,7 +2,7 @@
     "ApexTrigger" : [
         {
             "name"          : "NSL Trigger",
-            "file_name"     : "NSL Trigger.trigger",
+            "file_name"     : "NSLTrigger.trigger",
             "description"   : "NSL Trigger template",
             "author"        : "John Pipkin",
             "params"        : [ 
@@ -23,7 +23,7 @@
     "ApexClass" :  [
         {
             "name"          : "NSL Trigger Handler",
-            "file_name"     : "NSL Trigger Handler.cls",
+            "file_name"     : "NSLTriggerHandler.cls",
             "description"   : "NSL Trigger Handler template",
             "author"        : "John Pipkin",
             "params"        : [ 
@@ -36,7 +36,7 @@
         },
         {
             "name"          : "NSL Before Class",
-            "file_name"     : "NSL Before Class.cls",
+            "file_name"     : "NSLBeforeClass.cls",
             "description"   : "NSL Before Class template",
             "author"        : "John Pipkin",
             "params"        : [ 
@@ -59,7 +59,7 @@
         },
         {
             "name"          : "NSL After Class",
-            "file_name"     : "NSL After Class.cls",
+            "file_name"     : "NSLAfterClass.cls",
             "description"   : "NSL After Class template",
             "author"        : "John Pipkin",
             "params"        : [ 
