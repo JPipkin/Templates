@@ -29,8 +29,13 @@
             "params"        : [ 
                 {   
                     "name"          : "api_name",
-                    "description"   : "Already created Trigger API Name",
+                    "description"   : "Class Name",
                     "default"       : "TriggerHandler"
+                },
+                {   
+                    "name"          : "trigger_name",
+                    "description"   : "Trigger API Name",
+                    "default"       : "Account"
                 }
            ]
         },
@@ -42,18 +47,28 @@
             "params"        : [ 
                 {   
                     "name"          : "object_name",
-                    "description"   : "Object API Name",
+                    "description"   : "Object",
                     "default"       : "Account"
                 },
                 {   
                     "name"          : "api_name",
-                    "description"   : "Already created Trigger API Name",
+                    "description"   : "Trigger API Name",
                     "default"       : "Before"
                 },
                 {
                     "name"          : "obj_var",
-                    "description"   : "Variable for Trigger.new loop",
+                    "description"   : "3 Letter Variable for loop",
                     "default"       : "CurrentMCT"
+                },
+                {
+                    "name"          : "cur",
+                    "description"   : "Do not edit",
+                    "default"       : "Current"
+                },
+                {
+                    "name"          : "old",
+                    "description"   : "Do not edit",
+                    "default"       : "Old"
                 }
            ]
         },
@@ -77,6 +92,16 @@
                     "name"          : "obj_var",
                     "description"   : "Variable for Trigger.new loop",
                     "default"       : "CurrentMCT"
+                },
+                {
+                    "name"          : "cur",
+                    "description"   : "Do not edit",
+                    "default"       : "Current"
+                },
+                {
+                    "name"          : "old",
+                    "description"   : "Do not edit",
+                    "default"       : "Old"
                 }
            ]
         }

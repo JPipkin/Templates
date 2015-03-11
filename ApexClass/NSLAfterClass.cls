@@ -30,15 +30,15 @@ public class {{ api_name }} {
       // -- FIRST PASS OF TRIGGER MAP TO FILL VARIABLES THAT DECIDE IF QUERIES ARE EXECUTED -- //
     // ------------------------------------------------------------------------------------- //
     if(Trigger.isDelete)  {
-      for({{ object_name }} Current{{ obj_var }} : (List<{{ object_name }}>)Trigger.Old) {
+      for({{ object_name }} {{ cur }}{{ obj_var }} : (List<{{ object_name }}>)Trigger.Old) {
                 
       }// For records of trigger - set up variables that control queries
     }
     else {
-      for({{ object_name }} Current{{ obj_var }} : (List<{{ object_name }}>)Trigger.new) {
-        {{ object_name }} Old{{ obj_var }} = null;
+      for({{ object_name }} {{ cur }}{{ obj_var }} : (List<{{ object_name }}>)Trigger.new) {
+        {{ object_name }} {{ old }}{{ obj_var }} = null;
         if(Trigger.isUpdate)
-          Old{{ obj_var } = ({{ object_name }})Trigger.OldMap.get(Current{{ obj_var }}.Id) ;
+          {{ old }}{{ obj_var } = ({{ object_name }})Trigger.OldMap.get({{ cur }}{{ obj_var }}.Id) ;
                 
                 
       }// For records of trigger - set up variables that control queries
@@ -54,15 +54,15 @@ public class {{ api_name }} {
       // -- SECOND PASS OF TRIGGER MAP TO GET VARIABLES READY FOR CRUD ON OTHER OBEJCTS -- //
     // ----------------------------------------------------------------------------------//
     if(Trigger.isDelete)  {
-      for({{ object_name }} Current{{ obj_var }} : (List<{{ object_name }}>)Trigger.Old) {
+      for({{ object_name }} {{ cur }}{{ obj_var }} : (List<{{ object_name }}>)Trigger.Old) {
                 
       }// For records of trigger - set up variables that control queries
     }
     else {
-      for({{ object_name }} Current{{ obj_var }} : (List<{{ object_name }}>)Trigger.new) {
-        {{ object_name }} Old{{ obj_var }} = null;
+      for({{ object_name }} {{ cur }}{{ obj_var }} : (List<{{ object_name }}>)Trigger.new) {
+        {{ object_name }} {{ old }}{{ obj_var }} = null;
         if(Trigger.isUpdate)
-          Old{{ obj_var }} = ({{ object_name }})Trigger.OldMap.get(Current{{ obj_var }}.Id) ;
+          {{ old }}{{ obj_var }} = ({{ object_name }})Trigger.OldMap.get({{ cur }}{{ obj_var }}.Id) ;
                 
                 
       }// For records of trigger - set up variables that control queries
