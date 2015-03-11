@@ -1,3 +1,3 @@
-trigger {{ api_name }} on {{ object_name }} (before insert, before update, before delete, before undelete, after insert, after update, after delete, after undelete){
+trigger {{ api_name }} on {{ object_name }} (before insert, before update, before delete, after insert, after update, after delete){
 	new {{ api_name }}TriggerHandler().run();
 }
