@@ -30,7 +30,7 @@
                 {   
                     "name"          : "api_name",
                     "description"   : "Already created Trigger API Name",
-                    "default"       : "MyCoolTrigger"
+                    "default"       : "TriggerHandler"
                 }
            ]
         },
@@ -48,7 +48,7 @@
                 {   
                     "name"          : "api_name",
                     "description"   : "Already created Trigger API Name",
-                    "default"       : "MyCoolTrigger"
+                    "default"       : "Before"
                 },
                 {
                     "name"          : "obj_var",
@@ -71,7 +71,7 @@
                 {   
                     "name"          : "api_name",
                     "description"   : "Already created Trigger API Name",
-                    "default"       : "MyCoolTrigger"
+                    "default"       : "After"
                 },
                 {
                     "name"          : "obj_var",

@@ -1,4 +1,4 @@
-public class {{ api_name }}TriggerHandler extends TriggerHandler{
+public class {{ api_name }} extends TriggerHandler{
 
    /****************************************
    * context method overrides

@@ -1,4 +1,4 @@
-public class {{ api_name }}Before {
+public class {{ api_name }} {
   // -------------------------------------------------------------------------------//
   // ------------------------- DESCRIPTION OF TRIGGER TASKS ------------------------//
   // ----- FORMAT : item number. date - Ticket # - description of task -------------//
