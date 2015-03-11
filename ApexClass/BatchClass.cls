@@ -4,7 +4,7 @@ global class {{ api_name }} implements Database.Batchable<SObject>, Database.Sta
         String query = '';
 
         if(Test.isRunningTest())
-            query += ' limit 5';
+            query += ' limit 200';
         return Database.getQueryLocator(query);
     }
     
@@ -24,7 +24,7 @@ global class {{ api_name }} implements Database.Batchable<SObject>, Database.Sta
             semResult.setToAddresses(new String[] {'sf.onlinescherrors.group@nextsteplivinginc.com'});
             
             semResult.setSubject('Error in {{api_name}}');
-            String fbody = 'The scheduled job, ' + aaJob.ApexClass.Name + (aaJob.MethodName == null ? '': ' (' + aaJob.MethodName + ')' ) + ', failed to run.';
+            String fbody = 'The batch job, {{ api_name }}, failed to run.';
             fbody += '\n\nERROR: ' + aaJob.ExtendedStatus;
             fbody += '\n\n' + URL.getSalesforceBaseUrl().toExternalForm() + '/apexpages/setup/listAsyncApexJobs.apexp?retURL=%2Fui%2Fsetup%2FSetup%3Fsetupid%3DJobs&setupid=AsyncApexJobs';
             semResult.setPlainTextBody(fbody);
