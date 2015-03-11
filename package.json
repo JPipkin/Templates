@@ -28,7 +28,7 @@
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
-                    "name"          : "trigger_api_name",
+                    "name"          : "api_name",
                     "description"   : "Already created Trigger API Name",
                     "default"       : "MyCoolTrigger"
                 }
@@ -46,7 +46,7 @@
                     "default"       : "Account"
                 },
                 {   
-                    "name"          : "trigger_api_name",
+                    "name"          : "api_name",
                     "description"   : "Already created Trigger API Name",
                     "default"       : "MyCoolTrigger"
                 },
@@ -69,7 +69,7 @@
                     "default"       : "Account"
                 },
                 {   
-                    "name"          : "trigger_api_name",
+                    "name"          : "api_name",
                     "description"   : "Already created Trigger API Name",
                     "default"       : "MyCoolTrigger"
                 },
