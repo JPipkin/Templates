@@ -9,7 +9,7 @@ global class {{ api_name }} implements Schedulable {
 		executeLogic();
 	}
 
-	global void executeLogic(){
+	global static void executeLogic(){
 		//MyBatchClass b = new MyBatchClass();
 		//database.executebatch(b);
 	}
