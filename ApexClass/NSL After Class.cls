@@ -1,4 +1,4 @@
-public class {{ api_name }}Before {
+public class {{ api_name }}After {
   // -------------------------------------------------------------------------------//
   // ------------------------- DESCRIPTION OF TRIGGER TASKS ------------------------//
   // ----- FORMAT : item number. date - Ticket # - description of task -------------//
@@ -24,21 +24,21 @@ public class {{ api_name }}Before {
 
 
 
-  public void doBefore()
+  public void doAfter()
   {
     // ------------------------------------------------------------------------------------- //
       // -- FIRST PASS OF TRIGGER MAP TO FILL VARIABLES THAT DECIDE IF QUERIES ARE EXECUTED -- //
     // ------------------------------------------------------------------------------------- //
     if(Trigger.isDelete)  {
-      for({{ object_name }} Current{{ api_name.substring(0,3) }} : (List<{{ object_name }}>)Trigger.Old) {
+      for({{ object_name }} Current{{ obj_var }} : (List<{{ object_name }}>)Trigger.Old) {
                 
       }// For records of trigger - set up variables that control queries
     }
     else {
-      for({{ object_name }} Current{{ api_name.substring(0,3) }} : (List<{{ object_name }}>)Trigger.new) {
-        {{ object_name }} Old{{ api_name.substring(0,3) }} = null;
+      for({{ object_name }} Current{{ obj_var }} : (List<{{ object_name }}>)Trigger.new) {
+        {{ object_name }} Old{{ obj_var }} = null;
         if(Trigger.isUpdate)
-          Old{{ api_name.substring(0,3) }} = ({{ object_name }})Trigger.OldMap.get(Current{{ api_name.substring(0,3) }}.Id) ;
+          Old{{ obj_var } = ({{ object_name }})Trigger.OldMap.get(Current{{ obj_var }}.Id) ;
                 
                 
       }// For records of trigger - set up variables that control queries
@@ -54,15 +54,15 @@ public class {{ api_name }}Before {
       // -- SECOND PASS OF TRIGGER MAP TO GET VARIABLES READY FOR CRUD ON OTHER OBEJCTS -- //
     // ----------------------------------------------------------------------------------//
     if(Trigger.isDelete)  {
-      for({{ object_name }} Current{{ api_name.substring(0,3) }} : (List<{{ object_name }}>)Trigger.Old) {
+      for({{ object_name }} Current{{ obj_var }} : (List<{{ object_name }}>)Trigger.Old) {
                 
       }// For records of trigger - set up variables that control queries
     }
     else {
-      for({{ object_name }} Current{{ api_name.substring(0,3) }} : (List<{{ object_name }}>)Trigger.new) {
-        {{ object_name }} Old{{ api_name.substring(0,3) }} = null;
+      for({{ object_name }} Current{{ obj_var }} : (List<{{ object_name }}>)Trigger.new) {
+        {{ object_name }} Old{{ obj_var }} = null;
         if(Trigger.isUpdate)
-          Old{{ api_name.substring(0,3) }} = ({{ object_name }})Trigger.OldMap.get(Current{{ api_name.substring(0,3) }}.Id) ;
+          Old{{ obj_var }} = ({{ object_name }})Trigger.OldMap.get(Current{{ obj_var }}.Id) ;
                 
                 
       }// For records of trigger - set up variables that control queries

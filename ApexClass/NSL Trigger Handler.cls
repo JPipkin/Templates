@@ -1,15 +1,15 @@
-public class {{ api_name }}TriggerHandler extends TriggerHandler{
+public class {{ trigger_api_name }}TriggerHandler extends TriggerHandler{
 
    /****************************************
    * context method overrides
    ****************************************/
 
   protected override void afterHandler() {
-    new {{ api_name }}After().doAfter();
+    new {{ trigger_api_name }}After().doAfter();
   } 
 
   protected override void beforeHandler() {
-    new {{ api_name }}Before().doBefore();
+    new {{ trigger_api_name }}Before().doBefore();
   } 
 
 }

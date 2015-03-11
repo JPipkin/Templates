@@ -1,0 +1,84 @@
+{
+    "ApexTrigger" : [
+        {
+            "name"          : "NSL Trigger",
+            "file_name"     : "NSL Trigger.trigger",
+            "description"   : "NSL Trigger template",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Apex Trigger API Name",
+                    "default"       : "MyCoolTrigger"
+                },
+                {   
+                    "name"          : "object_name",
+                    "description"   : "Object API Name",
+                    "default"       : "Account"
+                }
+                
+           ]
+        }
+    ],
+    "ApexClass" :  [
+        {
+            "name"          : "NSL Trigger Handler",
+            "file_name"     : "NSL Trigger Handler.cls",
+            "description"   : "NSL Trigger Handler template",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "trigger_api_name",
+                    "description"   : "Already created Trigger API Name",
+                    "default"       : "MyCoolTrigger"
+                }
+           ]
+        },
+        {
+            "name"          : "NSL Before Class",
+            "file_name"     : "NSL Before Class.cls",
+            "description"   : "NSL Before Class template",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "object_name",
+                    "description"   : "Object API Name",
+                    "default"       : "Account"
+                },
+                {   
+                    "name"          : "trigger_api_name",
+                    "description"   : "Already created Trigger API Name",
+                    "default"       : "MyCoolTrigger"
+                },
+                {
+                    "name"          : "obj_var",
+                    "description"   : "Variable for Trigger.new loop",
+                    "default"       : "CurrentMCT"
+                }
+           ]
+        },
+        {
+            "name"          : "NSL After Class",
+            "file_name"     : "NSL After Class.cls",
+            "description"   : "NSL After Class template",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "object_name",
+                    "description"   : "Object API Name",
+                    "default"       : "Account"
+                },
+                {   
+                    "name"          : "trigger_api_name",
+                    "description"   : "Already created Trigger API Name",
+                    "default"       : "MyCoolTrigger"
+                },
+                {
+                    "name"          : "obj_var",
+                    "description"   : "Variable for Trigger.new loop",
+                    "default"       : "CurrentMCT"
+                }
+           ]
+        }
+    ]
+}
