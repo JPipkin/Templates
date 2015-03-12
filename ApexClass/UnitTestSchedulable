@@ -1,0 +1,11 @@
+@isTest
+private class {{ api_name }} {
+	
+	@isTest static void testMethod1() {
+
+        DateTime dt= system.now().addMinutes(1);
+        String timeForScheduler = dt.format('s m H d M \'?\' yyyy');
+        Id job_id = System.schedule('{{ api_name }}', timeForScheduler, new {{schd_class}}());        
+	}
+	
+}

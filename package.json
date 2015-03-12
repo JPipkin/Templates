@@ -204,5 +204,23 @@
                 }
            ]
         }
+        {
+            "name"          : "Unit Test for Schedulable Class",
+            "file_name"     : "UnitTestSchedulable.cls",
+            "description"   : "Test Method Class",
+            "author"        : "Veena Heragu",
+            "params"        : [ 
+                 {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                },
+                {   
+                    "name"          : "schd_class",
+                    "description"   : "Schedulable Class",
+                    "default"       : "ClassName"
+                }
+          ]
+        }
     ]
 }
