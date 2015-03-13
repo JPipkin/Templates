@@ -5,7 +5,7 @@ private class {{ api_name }} {
 
         DateTime dt= system.now().addMinutes(1);
         String timeForScheduler = dt.format('s m H d M \'?\' yyyy');
-        Id job_id = System.schedule('{{ api_name }}', timeForScheduler, new {{schd_class}}());        
+        Id job_id = System.schedule('TestSchdJob', timeForScheduler, new {{schd_class}}());        
 	}
 	
 }
