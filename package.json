@@ -212,13 +212,13 @@
             "params"        : [ 
                  {   
                     "name"          : "api_name",
-                    "description"   : "Class Name",
-                    "default"       : "ClassName"
+                    "description"   : "Test Class Name",
+                    "default"       : "TestClassName"
                 },
                 {   
                     "name"          : "schd_class",
-                    "description"   : "Schedulable Class",
-                    "default"       : "ClassName"
+                    "description"   : "Schedulable Class Name",
+                    "default"       : "SchedulableClassName"
                 }
           ]
         }
