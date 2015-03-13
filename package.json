@@ -203,7 +203,7 @@
                     "default"       : "ClassName"
                 }
            ]
-        }
+        },
         {
             "name"          : "Unit Test for Schedulable Class",
             "file_name"     : "UnitTestSchedulable.cls",
