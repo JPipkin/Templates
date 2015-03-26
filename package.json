@@ -20,6 +20,21 @@
            ]
         }
     ],
+    "ApexPage" : [
+        {
+            "name"          : "NSL Visualforce Page",
+            "file_name"     : "BlankVFPage.page",
+            "description"   : "NSL Visualforce Page template",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Apex Page API Name",
+                    "default"       : "ApiName"
+                }
+           ]
+        }
+    ],
     "ApexClass" :  [
 
         {
@@ -203,24 +218,6 @@
                     "default"       : "ClassName"
                 }
            ]
-        },
-        {
-            "name"          : "Unit Test for Schedulable Class",
-            "file_name"     : "UnitTestSchedulable.cls",
-            "description"   : "Test Method Class",
-            "author"        : "Veena Heragu",
-            "params"        : [ 
-                 {   
-                    "name"          : "api_name",
-                    "description"   : "Test Class Name",
-                    "default"       : "TestClassName"
-                },
-                {   
-                    "name"          : "schd_class",
-                    "description"   : "Schedulable Class Name",
-                    "default"       : "SchedulableClassName"
-                }
-          ]
         }
     ]
 }
