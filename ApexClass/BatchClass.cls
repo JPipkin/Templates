@@ -1,20 +1,32 @@
 global class {{ api_name }} implements Database.Batchable<SObject>, Database.Stateful {
 
     global Database.QueryLocator start(Database.BatchableContext bc) {
+        
+        // Start logging messages for this run of the batch in Batch_Job_Message__c object
+        // Instead of system.debug, use BatchJobHelper.AddMessage(Caller, Message)
+        // it will dd message to  Batch_Job_Message__c object AND do system.debug
+        BatchJobHelper.StartMessages('SchdCommSolarTeamWIP');
+
         String query = '';
 
         if(Test.isRunningTest())
             query += ' limit 200';
+
+        BatchJobHelper.AddMessage('{{ api_name }}', 'query = ' + query);
+
         return Database.getQueryLocator(query);
     }
     
     global void execute(Database.BatchableContext bc, List<{{ sobj }}> {{ obj_var }}){
+
+        BatchJobHelper.AddMessage('{{ api_name }}', 'execute started');
 
 
     }
         
     global void finish(Database.BatchableContext bc) {
 
+        BatchJobHelper.AddMessage('{{ api_name }}', 'finish started');
 
         AsyncApexJob aaJob = [SELECT ApexClass.Name, Status, ExtendedStatus, MethodName FROM AsyncApexJob WHERE Id = :bc.getJobId()];
 
