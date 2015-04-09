@@ -5,7 +5,7 @@ global class {{ api_name }} implements Database.Batchable<SObject>, Database.Sta
         // Start logging messages for this run of the batch in Batch_Job_Message__c object
         // Instead of system.debug, use BatchJobHelper.AddMessage(Caller, Message)
         // it will dd message to  Batch_Job_Message__c object AND do system.debug
-        BatchJobHelper.StartMessages('SchdCommSolarTeamWIP');
+        BatchJobHelper.StartMessages('{{ api_name }}');
 
         String query = '';
 
@@ -31,6 +31,8 @@ global class {{ api_name }} implements Database.Batchable<SObject>, Database.Sta
         AsyncApexJob aaJob = [SELECT ApexClass.Name, Status, ExtendedStatus, MethodName FROM AsyncApexJob WHERE Id = :bc.getJobId()];
 
         if(aaJob.Status == 'Failed' || (aaJob.ExtendedStatus != null && aaJob.ExtendedStatus != '')){
+
+            BatchJobHelper.AddMessage('{{ api_name }}', 'Failed, status = ' + aaJob.ExtendedStatus);
 
             Messaging.SingleEmailMessage semResult = new Messaging.SingleEmailMessage();
             semResult.setToAddresses(new String[] {'sf.onlinescherrors.group@nextsteplivinginc.com'});
