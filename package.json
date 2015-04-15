@@ -239,7 +239,7 @@
                     "name"          : "batch_class",
                     "description"   : "Batch Class Name",
                     "default"       : "BatchClassName"
-                },
+                }
            ]
         }
     ]
