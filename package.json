@@ -221,7 +221,7 @@
         },
         {
             "name"          : "Unit Test Schedulable Batchable",
-            "file_name"     : "UnitTest.cls",
+            "file_name"     : "UnitTestSchedulableBatchable.cls",
             "description"   : "Test Method Class for Schedulable/Batchable classes",
             "author"        : "Veena Heragu",
             "params"        : [ 
