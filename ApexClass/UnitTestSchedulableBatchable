@@ -16,7 +16,7 @@ public class {{ api_name }} {
 		Test.startTest();
 		DateTime dt= system.now().addMinutes(1);
 		String timeForScheduler = dt.format('s m H d M E yyyy');
-		Id job_id = System.schedule('{{ api_name }}', timeForScheduler, new {{ schd_class }}());		
+		//Id job_id = System.schedule('{{ api_name }}', timeForScheduler, new {{ schd_class }}());		
 		Test.stopTest();
 	
 	}
@@ -25,7 +25,7 @@ public class {{ api_name }} {
 	static testMethod void myTest2() {
 
         test.startTest();
-        ID batchid = database.executeBatch(new {{ batch_class }}());
+        //ID batchid = database.executeBatch(new {{ batch_class }}());
         test.stopTest();
 		
 	}
