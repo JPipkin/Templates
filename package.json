@@ -218,6 +218,29 @@
                     "default"       : "ClassName"
                 }
            ]
+        },
+        {               
+            "name"          : "Unit Test Schedulable Batchable",
+            "file_name"     : "UnitTestSchedulableBatchable.cls",
+            "description"   : "Test Method Class for Schedulable/Batchable classes",
+            "author"        : "John Pipkin",
+            "params"        : [
+                {  
+                    "name"          : "api_name",
+                    "description"   : "Test Class Name",
+                    "default"       : "TestClassName"
+                },
+                {  
+                    "name"          : "schd_class",
+                    "description"   : "Schedulable Class Name",
+                    "default"       : "SchedulableClassName"
+                },
+                {  
+                    "name"          : "batch_class",
+                    "description"   : "Batch Class Name",
+                    "default"       : "BatchClassName"
+                }
+           ]
         }
     ]
 }
