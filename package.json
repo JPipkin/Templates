@@ -156,7 +156,7 @@
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
-                    "name"          : "apiname",
+                    "name"          : "api_name",
                     "description"   : "Class Name",
                     "default"       : "ClassName"
                 }

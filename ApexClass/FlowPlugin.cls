@@ -1,4 +1,4 @@
-global with sharing class {{ apiname }} implements Process.Plugin{
+global with sharing class {{ api_name }} implements Process.Plugin{
 
     global Process.PluginResult invoke(Process.PluginRequest request)   
     {   
