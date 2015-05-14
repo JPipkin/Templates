@@ -150,6 +150,19 @@
            ]
         },
         {
+            "name"          : "Flow Plugin",
+            "file_name"     : "FlowPlugin.cls",
+            "description"   : "Plugin for Flows",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                }
+           ]
+        },
+        {
             "name"          : "Public No Constructor",
             "file_name"     : "PublicNoConstructor.cls",
             "description"   : "NSL Public with No Constructor Class",
