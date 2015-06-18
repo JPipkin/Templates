@@ -11,9 +11,9 @@ global class {{ api_name }} implements Schedulable {
 
         // first delete the job if it already exists
         BatchJobHelper.DeleteJobs('{{ api_name }} Manual') ;
-		DateTime dt= system.now().addMinutes(1);
+		DateTime dt = system.now().addMinutes(1);
 		String timeForScheduler = dt.format('s m H d M \'?\' yyyy');
-		Id job_id = System.schedule('{{ api_name }} Manual', timeForScheduler, new {{ api_name }}());
+		Id jobid = System.schedule('{{ api_name }} Manual', timeForScheduler, new {{ api_name }}());
     }
 
 
