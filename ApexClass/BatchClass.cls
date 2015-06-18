@@ -19,7 +19,7 @@ global class {{ api_name }} implements Database.Batchable<SObject>, Database.Sta
     
     global void execute(Database.BatchableContext bc, List<{{ sobj }}> {{ obj_var }}){
 
-        BatchJobHelper.AddMessage('{{ api_name }}', 'execute started');
+        BatchJobHelper.AddMessage('{{ api_name }}', 'execute started, {{ obj_var }}.size = ' + {{ obj_var }}.size());
 
 
     }
@@ -30,7 +30,7 @@ global class {{ api_name }} implements Database.Batchable<SObject>, Database.Sta
 
         AsyncApexJob aaJob = [SELECT ApexClass.Name, Status, ExtendedStatus, MethodName FROM AsyncApexJob WHERE Id = :bc.getJobId()];
 
-        if(aaJob.Status == 'Failed' || (aaJob.ExtendedStatus != null && aaJob.ExtendedStatus != '')){
+        if(aaJob.Status == 'Failed' || Test.isRunningTest() || (aaJob.ExtendedStatus != null && aaJob.ExtendedStatus != '')){
 
             BatchJobHelper.AddMessage('{{ api_name }}', 'Failed, status = ' + aaJob.ExtendedStatus);
 
