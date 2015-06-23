@@ -3,7 +3,10 @@ global class {{ api_name }} implements Schedulable {
     // use this methid to schedule this job
     public static void setup() {
         //String cronText = '0 0 22  ? * * *'; 
-        //system.schedule(''{{ api_name }} 10pm', cronText , new '{{ api_name }}());
+        //String jobName = '{{ api_name }} 10pm';
+        //if(Test.isRunningtest()) 
+        //  jobName += 'test';
+        //system.schedule(jobName, cronText , new '{{ api_name }}());
     }
 
     // use this methid to run this job once manually
