@@ -6,7 +6,7 @@ global class {{ api_name }} implements Schedulable {
         //String jobName = '{{ api_name }} 10pm';
         //if(Test.isRunningtest()) 
         //  jobName += 'test';
-        //system.schedule(jobName, cronText , new '{{ api_name }}());
+        //system.schedule(jobName, cronText , new {{ api_name }}());
     }
 
     // use this methid to run this job once manually
@@ -40,7 +40,6 @@ global class {{ api_name }} implements Schedulable {
 
 	global static void executeLogic(){
         BatchJobHelper.AddMessage('{{ api_name }}', 'executeLogic started');
-		//MyBatchClass b = new MyBatchClass();
-		//database.executebatch(b);
+		//database.executebatch(new MyBatchClass());
 	}
 }
