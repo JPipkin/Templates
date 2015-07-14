@@ -19,6 +19,7 @@ public class {{ api_name }} {
         //String timeForScheduler = dt.format('s m H d M \'?\' yyyy');
         //Id job_id = System.schedule('{{ api_name }}', timeForScheduler, new {{ schd_class }}());       
 
+        //{{ schd_class }}.setup();
         //{{ schd_class }}.manual();
         //{{ schd_class }}.{{ schd_class }}buttonMethod();
 
