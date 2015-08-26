@@ -12,27 +12,27 @@ global class {{ api_name }} implements Database.Batchable<SObject>, Database.Sta
         if(Test.isRunningTest())
             query += ' limit 200';
 
-        BatchJobHelper.AddMessage('{{ api_name }}', 'query = ' + query);
+        BatchJobHelper.AddMessage('{{ api_name }}', 'query = ' + query, true);
 
         return Database.getQueryLocator(query);
     }
     
     global void execute(Database.BatchableContext bc, List<{{ sobj }}> {{ obj_var }}){
 
-        BatchJobHelper.AddMessage('{{ api_name }}', 'execute started, {{ obj_var }}.size = ' + {{ obj_var }}.size());
+        BatchJobHelper.AddMessage('{{ api_name }}', 'execute started, {{ obj_var }}.size = ' + {{ obj_var }}.size(), true);
 
 
     }
         
     global void finish(Database.BatchableContext bc) {
 
-        BatchJobHelper.AddMessage('{{ api_name }}', 'finish started');
+        BatchJobHelper.AddMessage('{{ api_name }}', 'finish started', true);
 
         AsyncApexJob aaJob = [SELECT ApexClass.Name, Status, ExtendedStatus, MethodName FROM AsyncApexJob WHERE Id = :bc.getJobId()];
 
         if(aaJob.Status == 'Failed' || Test.isRunningTest() || (aaJob.ExtendedStatus != null && aaJob.ExtendedStatus != '')) {
 
-            BatchJobHelper.AddMessage('{{ api_name }}', 'Failed, status = ' + aaJob.ExtendedStatus);
+            BatchJobHelper.AddMessage('{{ api_name }}', 'Failed, status = ' + aaJob.ExtendedStatus, true);
 
             Messaging.SingleEmailMessage semResult = new Messaging.SingleEmailMessage();
             semResult.setToAddresses(new String[] {'sf.onlinescherrors.group@nextsteplivinginc.com'});
@@ -52,6 +52,9 @@ global class {{ api_name }} implements Database.Batchable<SObject>, Database.Sta
             }
 
         }
+
+        // Now, insert all the messages logged for this batch job
+        BatchJobHelper.writeLogs('{{ api_name }}');
     }
     
 }

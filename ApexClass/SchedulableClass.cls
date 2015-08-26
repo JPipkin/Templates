@@ -34,12 +34,17 @@ global class {{ api_name }} implements Schedulable {
 	
 	webservice static void {{ api_name }}buttonMethod(){
         BatchJobHelper.StartMessages('{{ api_name }}');
-        BatchJobHelper.AddMessage('{{ api_name }}', 'buttonMethod started');
+        BatchJobHelper.AddMessage('{{ api_name }}', 'buttonMethod started', true);
 		executeLogic();
 	}
 
 	global static void executeLogic(){
-        BatchJobHelper.AddMessage('{{ api_name }}', 'executeLogic started');
+        BatchJobHelper.AddMessage('{{ api_name }}', 'executeLogic started', true);
 		//database.executebatch(new MyBatchClass());
+
+        // --- Add logic here
+
+        // insert log messages at the end of your process
+        BatchJobHelper.writeLogs('{{ api_name }}');
 	}
 }
