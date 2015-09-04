@@ -5,11 +5,11 @@ public class {{ api_name }} extends TriggerHandler{
    ****************************************/
 
   protected override void afterHandler() {
-    //new {{ trigger_name }}After().doAfter();
+    //new {{ obj_abbrev }}After().doAfter();
   } 
 
   protected override void beforeHandler() {
-    //new {{ trigger_name }}Before().doBefore();
+    //new {{ obj_abbrev }}Before().doBefore();
   } 
 
 }

@@ -7,14 +7,19 @@
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
-                    "name"          : "api_name",
-                    "description"   : "Apex Trigger API Name",
-                    "default"       : "ApiName"
-                },
-                {   
                     "name"          : "object_name",
                     "description"   : "Object API Name",
                     "default"       : "Object"
+                },
+                {   
+                    "name"          : "obj_abbrev",
+                    "description"   : "Apex Trigger API Name",
+                    "default"       : "objectAbbrev"
+                },
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Apex Trigger API Name",
+                    "default"       : "[objectAbbrev]Trigger"
                 }
                 
            ]
@@ -30,7 +35,7 @@
                 {   
                     "name"          : "api_name",
                     "description"   : "Apex Page API Name",
-                    "default"       : "ApiName"
+                    "default"       : "objectAbbrev"
                 }
            ]
         }
@@ -50,23 +55,13 @@
                 },
                 {   
                     "name"          : "api_name",
-                    "description"   : "Already created Trigger API Name",
-                    "default"       : "[trig]After"
+                    "description"   : "Already created Trigger's objectAbbrev",
+                    "default"       : "[objectAbbrev]After"
                 },
                 {
                     "name"          : "obj_var",
-                    "description"   : "Variable for Trigger.new loop",
-                    "default"       : "Variable"
-                },
-                {
-                    "name"          : "cur",
-                    "description"   : "Do not edit",
-                    "default"       : "Current"
-                },
-                {
-                    "name"          : "old",
-                    "description"   : "Do not edit",
-                    "default"       : "Old"
+                    "description"   : "3 letter postfix for 'current' and 'old' Variable for Trigger loops",
+                    "default"       : "objectAbbrev3Letter"
                 }
            ]
         },
@@ -101,28 +96,18 @@
             "params"        : [ 
                 {   
                     "name"          : "object_name",
-                    "description"   : "Object",
+                    "description"   : "Object API Name",
                     "default"       : "Object"
                 },
                 {   
                     "name"          : "api_name",
-                    "description"   : "Trigger API Name",
-                    "default"       : "[trig]Before"
+                    "description"   : "Already created Trigger's objectAbbrev",
+                    "default"       : "[objectAbbrev]Before"
                 },
                 {
                     "name"          : "obj_var",
-                    "description"   : "3 Letter Variable for loop",
-                    "default"       : "Variable"
-                },
-                {
-                    "name"          : "cur",
-                    "description"   : "Do not edit",
-                    "default"       : "Current"
-                },
-                {
-                    "name"          : "old",
-                    "description"   : "Do not edit",
-                    "default"       : "Old"
+                    "description"   : "3 letter postfix for 'current' and 'old' Variable for Trigger loops",
+                    "default"       : "objectAbbrev3Letter"
                 }
            ]
         },
@@ -208,14 +193,14 @@
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
-                    "name"          : "api_name",
-                    "description"   : "Class Name",
-                    "default"       : "[trig]TriggerHandler"
+                    "name"          : "obj_abbrev",
+                    "description"   : "Apex Trigger API Name",
+                    "default"       : "objectAbbrev"
                 },
                 {   
-                    "name"          : "trigger_name",
-                    "description"   : "Trigger API Name",
-                    "default"       : "TriggerName"
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "[objectAbbrev]TriggerHandler"
                 }
            ]
         },
