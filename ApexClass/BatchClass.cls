@@ -1,32 +1,81 @@
 global class {{ api_name }} implements Database.Batchable<SObject>, Database.Stateful {
 
+    global Integer numSuccess = 0;
+    global String dmlFailures = null;
+
     global Database.QueryLocator start(Database.BatchableContext bc) {
         
-        // Start logging messages for this run of the batch in Batch_Job_Message__c object
-        // Instead of system.debug, use BatchJobHelper.AddMessage(Caller, Message)
-        // it will dd message to  Batch_Job_Message__c object AND do system.debug
-        BatchJobHelper.StartMessages('{{ api_name }}');
+        try
+        {
+            // Start logging messages for this run of the batch in Batch_Job_Message__c object
+            // Instead of system.debug, use BatchJobHelper.AddMessage(Caller, Message)
+            // it will dd message to  Batch_Job_Message__c object AND do system.debug
+            BatchJobHelper.StartMessages('{{ api_name }}');
 
-        String query = '';
+            String query = '';
 
-        if(Test.isRunningTest())
-            query += ' limit 200';
+            if(Test.isRunningTest())
+                query += ' limit 200';
 
-        BatchJobHelper.AddMessage('{{ api_name }}', 'query = ' + query, true);
+            BatchJobHelper.AddMessage('{{ api_name }}', 'query = ' + query, true);
 
-        return Database.getQueryLocator(query);
+            return Database.getQueryLocator(query);
+        }
+        catch(Exception ex)
+        {
+            BatchJobHelper.exceptionHandler('{{ api_name }}', ex);
+            return Database.getQueryLocator('Select Id from {{ sobj }} where Id = null');
+        }
+
     }
     
     global void execute(Database.BatchableContext bc, List<{{ sobj }}> {{ obj_var }}){
 
-        BatchJobHelper.AddMessage('{{ api_name }}', 'execute started, {{ obj_var }}.size = ' + {{ obj_var }}.size(), true);
+        try
+        {
+            BatchJobHelper.AddMessage('{{ api_name }}', 'execute started, {{ obj_var }}.size = ' + {{ obj_var }}.size(), true);
+
+            // ---------------------- ADD YOUR LOGIC HERE ----------------------------------------------
+            
+            //Integer i = 0;
+            //Database.SaveResult[] srList = database.insert(objectList, false) ;
+            //Database.SaveResult[] srList = database.update(objectList, false) ;
+            //for (Database.SaveResult sr : srList) {
+            //    if (sr.isSuccess()) 
+            //        numSuccess++;
+            //    else {
+            //        // Operation failed, so get all errors                
+            //        for(Database.Error err : sr.getErrors()) {
+            //            // for inserts
+            //            String errMsg = 'Error creating Object (' + objectList[i].Name + '): ' + err.getStatusCode() + ': ' + err.getMessage() + ', ' +
+            //                                        'fields that affected this error: ' + err.getFields();
+            //            // for updates
+            //            String errMsg = 'Error updating Object (' + objectList[i].Id + '): ' + err.getStatusCode() + ': ' + err.getMessage() + ', ' +
+            //                                        'fields that affected this error: ' + err.getFields();
+            //            dmlFailures += '\n' + errMsg;
+            //            BatchJobHelper.AddMessage('{{ api_name }}', errMsg, true);
+            //        }
+            //    }// some failures
+            //    i++;
+            //}
+
+
+            BatchJobHelper.AddMessage('{{ api_name }}', 'Batch Done', true);
+
+            // Now, insert all the messages logged for this batch job
+            BatchJobHelper.writeLogs('{{ api_name }}');
+        }
+        catch(Exception ex)
+        {
+            BatchJobHelper.exceptionHandler('{{ api_name }}', ex);
+        }
 
 
     }
         
     global void finish(Database.BatchableContext bc) {
 
-        BatchJobHelper.AddMessage('{{ api_name }}', 'finish started', true);
+        BatchJobHelper.AddMessage('{{ api_name }}', 'finish started, number of successful updates = ' + numSuccess, true);
 
         AsyncApexJob aaJob = [SELECT ApexClass.Name, Status, ExtendedStatus, MethodName FROM AsyncApexJob WHERE Id = :bc.getJobId()];
 
@@ -52,6 +101,25 @@ global class {{ api_name }} implements Database.Batchable<SObject>, Database.Sta
             }
 
         }
+        if(dmlFailures != null || Test.isRunningTest())
+        {
+            Messaging.SingleEmailMessage semResult = new Messaging.SingleEmailMessage();
+            semResult.setToAddresses(new String[] {'sf.onlinescherrors.group@nextsteplivinginc.com'});
+            
+            semResult.setSubject('DML failures in {{ api_name }}');
+            String fbody = 'The batch job, {{ api_name }}, had the follwing DML failures :';
+            fbody += '\n\n' + dmlFailures;
+            semResult.setPlainTextBody(fbody);
+            try
+            {
+              Messaging.sendEmail(new Messaging.SingleEmailMessage[] { semResult });
+            }
+            catch(Exception e)
+            {
+              system.debug(e);
+            }
+        }
+
 
         // Now, insert all the messages logged for this batch job
         BatchJobHelper.writeLogs('{{ api_name }}');

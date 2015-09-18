@@ -39,12 +39,19 @@ global class {{ api_name }} implements Schedulable {
 	}
 
 	global static void executeLogic(){
-        BatchJobHelper.AddMessage('{{ api_name }}', 'executeLogic started', true);
-		//database.executebatch(new MyBatchClass());
+        try
+        {
+            BatchJobHelper.AddMessage('{{ api_name }}', 'executeLogic started', true);
+    		//database.executebatch(new MyBatchClass());
 
-        // --- Add logic here
+            // --- Add logic here
 
-        // insert log messages at the end of your process
-        BatchJobHelper.writeLogs('{{ api_name }}');
+            // insert log messages at the end of your process
+            BatchJobHelper.writeLogs('{{ api_name }}');
+        }
+        catch(Exception ex)
+        {
+            BatchJobHelper.exceptionHandler('{{ api_name }}', ex);
+        }
 	}
 }
