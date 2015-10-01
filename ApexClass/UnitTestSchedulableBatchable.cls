@@ -2,11 +2,11 @@
 public class {{ api_name }} {
  
     @testSetup static void buildData(){
-        Account a = TestData.buildAccount(1);
-        insert a;
+        //Account a = TestData.buildAccount(1);
+        //insert a;
  
-        Opportunity o = TestData.buildStandardOpportunity(a.id,'Windows');
-        insert o;
+        //Opportunity o = TestData.buildStandardOpportunity(a.id,'Windows');
+        //insert o;
     }
  
     //test methods
