@@ -175,7 +175,7 @@
         },
         {
             "name"          : "Queueable",
-            "file_name"     : "Queueable.cls",
+            "file_name"     : "QueueableClass.cls",
             "description"   : "NSL Queueable Class",
             "author"        : "John Pipkin",
             "params"        : [ 
