@@ -10,20 +10,20 @@ global class {{ api_name }} implements Database.Batchable<SObject>, Database.Sta
             // Start logging messages for this run of the batch in Batch_Job_Message__c object
             // Instead of system.debug, use BatchJobHelper.AddMessage(Caller, Message)
             // it will dd message to  Batch_Job_Message__c object AND do system.debug
-            BatchJobHelper.StartMessages('{{ api_name }}');
+            //BatchJobHelper.StartMessages('{{ api_name }}');
 
             String query = '';
 
             if(Test.isRunningTest())
                 query += ' limit 200';
 
-            BatchJobHelper.AddMessage('{{ api_name }}', 'query = ' + query, true);
+            //BatchJobHelper.AddMessage('{{ api_name }}', 'query = ' + query, true);
 
             return Database.getQueryLocator(query);
         }
         catch(Exception ex)
         {
-            BatchJobHelper.exceptionHandler('{{ api_name }}', ex);
+            //BatchJobHelper.exceptionHandler('{{ api_name }}', ex);
             return Database.getQueryLocator('Select Id from {{ sobj }} where Id = null');
         }
 
@@ -33,7 +33,7 @@ global class {{ api_name }} implements Database.Batchable<SObject>, Database.Sta
 
         try
         {
-            BatchJobHelper.AddMessage('{{ api_name }}', 'execute started, {{ obj_var }}.size = ' + {{ obj_var }}.size(), true);
+            //BatchJobHelper.AddMessage('{{ api_name }}', 'execute started, {{ obj_var }}.size = ' + {{ obj_var }}.size(), true);
 
             // ---------------------- ADD YOUR LOGIC HERE ----------------------------------------------
             
@@ -60,14 +60,14 @@ global class {{ api_name }} implements Database.Batchable<SObject>, Database.Sta
             //}
 
 
-            BatchJobHelper.AddMessage('{{ api_name }}', 'Batch Done', true);
+            //BatchJobHelper.AddMessage('{{ api_name }}', 'Batch Done', true);
 
             // Now, insert all the messages logged for this batch job
-            BatchJobHelper.writeLogs('{{ api_name }}');
+            //BatchJobHelper.writeLogs('{{ api_name }}');
         }
         catch(Exception ex)
         {
-            BatchJobHelper.exceptionHandler('{{ api_name }}', ex);
+            //BatchJobHelper.exceptionHandler('{{ api_name }}', ex);
         }
 
 
@@ -75,7 +75,7 @@ global class {{ api_name }} implements Database.Batchable<SObject>, Database.Sta
         
     global void finish(Database.BatchableContext bc) {
 
-        BatchJobHelper.AddMessage('{{ api_name }}', 'finish started, number of successful updates = ' + numSuccess, true);
+        //BatchJobHelper.AddMessage('{{ api_name }}', 'finish started, number of successful updates = ' + numSuccess, true);
 
         AsyncApexJob aaJob = [SELECT ApexClass.Name, Status, ExtendedStatus, MethodName FROM AsyncApexJob WHERE Id = :bc.getJobId()];
 
@@ -122,7 +122,7 @@ global class {{ api_name }} implements Database.Batchable<SObject>, Database.Sta
 
 
         // Now, insert all the messages logged for this batch job
-        BatchJobHelper.writeLogs('{{ api_name }}');
+        //BatchJobHelper.writeLogs('{{ api_name }}');
     }
     
 }
