@@ -200,6 +200,29 @@
            ]
         },
         {
+            "name"          : "SchedulableBatchable",
+            "file_name"     : "SchedulableBatchClass.cls",
+            "description"   : "Schedulable, Batchable Class",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                },
+                {   
+                    "name"          : "sobj",
+                    "description"   : "SObject API",
+                    "default"       : "Object"
+                },
+                {   
+                    "name"          : "obj_var",
+                    "description"   : "Object Variable",
+                    "default"       : "Variable"
+                }
+           ]
+        },
+        {
             "name"          : "Trigger Handler",
             "file_name"     : "TriggerHandler.cls",
             "description"   : "NSL Trigger Handler template",

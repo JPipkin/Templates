@@ -1,6 +1,6 @@
 global class {{ api_name }} implements Schedulable {
 
-    // use this methid to schedule this job
+    // use this method to schedule this job
     public static void setup() {
         //String cronText = '0 0 22  ? * * *'; 
         //String jobName = '{{ api_name }} 10pm';
@@ -32,11 +32,11 @@ global class {{ api_name }} implements Schedulable {
 	}
 
 	
-	webservice static void {{ api_name }}buttonMethod(){
+	/*webservice static void {{ api_name }}buttonMethod(){
         BatchJobHelper.StartMessages('{{ api_name }}');
         BatchJobHelper.AddMessage('{{ api_name }}', 'buttonMethod started', true);
 		executeLogic();
-	}
+	}*/
 
 	global static void executeLogic(){
         try
