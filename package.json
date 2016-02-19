@@ -241,6 +241,15 @@
            ]
         },
         {
+            "name"          : "Trigger Handler Utils",
+            "file_name"     : "TriggerHandlerUtils.cls",
+            "description"   : "General Trigger Handler template",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                
+           ]
+        },
+        {
             "name"          : "Unit Test",
             "file_name"     : "UnitTest.cls",
             "description"   : "Test Method Class",
