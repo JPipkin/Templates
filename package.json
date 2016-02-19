@@ -1,9 +1,9 @@
 {
     "ApexTrigger" : [
         {
-            "name"          : "NSL Trigger",
-            "file_name"     : "NSLTrigger.trigger",
-            "description"   : "NSL Trigger template",
+            "name"          : "Trigger",
+            "file_name"     : "Trigger.trigger",
+            "description"   : "Trigger template",
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
@@ -27,9 +27,9 @@
     ],
     "ApexPage" : [
         {
-            "name"          : "NSL Visualforce Page",
+            "name"          : "Visualforce Page",
             "file_name"     : "BlankVFPage.page",
-            "description"   : "NSL Visualforce Page template",
+            "description"   : "Visualforce Page template",
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
@@ -45,7 +45,7 @@
         {
             "name"          : "After Class",
             "file_name"     : "AfterClass.cls",
-            "description"   : "NSL After Class template",
+            "description"   : "After Class template",
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
@@ -91,7 +91,7 @@
         {
             "name"          : "Before Class",
             "file_name"     : "BeforeClass.cls",
-            "description"   : "NSL Before Class template",
+            "description"   : "Before Class template",
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
@@ -150,7 +150,7 @@
         {
             "name"          : "Public No Constructor",
             "file_name"     : "PublicNoConstructor.cls",
-            "description"   : "NSL Public with No Constructor Class",
+            "description"   : "Public with No Constructor Class",
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
@@ -163,7 +163,7 @@
         {
             "name"          : "Public with Constructor",
             "file_name"     : "PublicWithConstructor.cls",
-            "description"   : "NSL Public with Constructor Class",
+            "description"   : "Public with Constructor Class",
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
@@ -176,7 +176,7 @@
         {
             "name"          : "Queueable",
             "file_name"     : "QueueableClass.cls",
-            "description"   : "NSL Queueable Class",
+            "description"   : "Queueable Class",
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
@@ -225,7 +225,7 @@
         {
             "name"          : "Trigger Handler",
             "file_name"     : "TriggerHandler.cls",
-            "description"   : "NSL Trigger Handler template",
+            "description"   : "Trigger Handler template",
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
@@ -245,9 +245,7 @@
             "file_name"     : "TriggerHandlerUtils.cls",
             "description"   : "General Trigger Handler template",
             "author"        : "John Pipkin",
-            "params"        : [ 
-                
-           ]
+            "params"        : [ ]
         },
         {
             "name"          : "Unit Test",
