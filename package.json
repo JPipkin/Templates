@@ -36,9 +36,9 @@
                     "default"       : "Object"
                 },
                 {   
-                    "name"          : "obj_abbrev",
+                    "name"          : "api_name",
                     "description"   : "Apex Trigger API Name",
-                    "default"       : "objectAbbrev"
+                    "default"       : "triggerapi"
                 }
            ]
         }

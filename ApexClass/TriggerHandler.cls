@@ -1,3 +1,9 @@
+/* Class:       {{ api_name }}
+ * Created On:  {{ today }}
+ * Created by:  OpFocus Team
+ * Description: Trigger handler for SObject {{ obj_abbrev }}
+ */
+
 public class {{ api_name }} extends TriggerHandler{
 
    /****************************************

@@ -1,3 +1,10 @@
+/* Class:       {{ api_name }}
+ * Created On:  {{ today }}
+ * Created by:  OpFocus Team
+ * Description: 
+ */
+
+ 
 global class {{ api_name }} implements Database.Batchable<SObject>, Database.Stateful {
 
     global Integer numSuccess = 0;

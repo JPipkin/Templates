@@ -1,3 +1,9 @@
+/* Class:       {{ api_name }}
+ * Created On:  {{ today }}
+ * Created by:  OpFocus Team
+ * Description: Class to Schedule Apex
+ */
+
 global class {{ api_name }} implements Schedulable {
 
     // use this method to schedule this job

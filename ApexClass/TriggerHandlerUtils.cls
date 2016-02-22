@@ -1,3 +1,9 @@
+/* Class:       {{ api_name }}
+ * Created On:  {{ today }}
+ * Created by:  OpFocus Team
+ * Description: Handler class for all trigger functionality
+ */
+
 public virtual class TriggerHandler {
 
   // static map of handlername, times run() was invoked

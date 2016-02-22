@@ -1,11 +1,11 @@
+/* Class:       {{ api_name }}
+ * Created On:  {{ today }}
+ * Created by:  OpFocus Team
+ * Description: 
+ */
+
+ 
 public class {{ api_name }} {
-  // -------------------------------------------------------------------------------//
-  // ------------------------- DESCRIPTION OF TRIGGER TASKS ------------------------//
-  // ----- FORMAT : item number. date - Ticket # - description of task -------------//
-  // ------------                date - Ticket # - description of change to item -- //
-  // ------------                date - Ticket # - description of change to item -- //
-  // ------------ : item number. date - Ticket # - description ---------------------//
-  // -------------------------------------------------------------------------------//
     
     
   // -------------------------------------------------------------------------------//

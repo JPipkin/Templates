@@ -1,3 +1,9 @@
+/* Class:       {{ api_name }}
+ * Created On:  {{ today }}
+ * Created by:  OpFocus Team
+ * Description: Class to schedule a batch class
+ */
+
 global class {{ api_name }} implements Schedulable, Database.Batchable<SObject>, Database.Stateful {
 
     // -------------------------------------------------------------------------------------
