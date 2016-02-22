@@ -1,9 +1,9 @@
 {
     "ApexTrigger" : [
         {
-            "name"          : "Trigger",
-            "file_name"     : "Trigger.trigger",
-            "description"   : "Trigger template",
+            "name"          : "Trigger for Framework",
+            "file_name"     : "Trigger w Framework.trigger",
+            "description"   : "Trigger with Framework template",
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
@@ -22,6 +22,24 @@
                     "default"       : "[objectAbbrev]Trigger"
                 }
                 
+           ]
+        },
+        {
+            "name"          : "Trigger no Framework",
+            "file_name"     : "Trigger no Framework.trigger",
+            "description"   : "Trigger no Framework template",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "object_name",
+                    "description"   : "Object API Name",
+                    "default"       : "Object"
+                },
+                {   
+                    "name"          : "obj_abbrev",
+                    "description"   : "Apex Trigger API Name",
+                    "default"       : "objectAbbrev"
+                }
            ]
         }
     ],
