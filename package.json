@@ -162,7 +162,23 @@
                     "name"          : "api_name",
                     "description"   : "Class Name",
                     "default"       : "ClassName"
+                },
+                {   
+                    "name"          : "title",
+                    "description"   : "Flow Title",
+                    "default"       : "FlowTitle"
+                },
+                {   
+                    "name"          : "method_name",
+                    "description"   : "Method Name",
+                    "default"       : "MethodName"
+                },
+                {   
+                    "name"          : "input_info",
+                    "description"   : "Input Info",
+                    "default"       : "List<String> lstString"
                 }
+
            ]
         },
         {

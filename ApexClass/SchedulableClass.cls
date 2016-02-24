@@ -1,5 +1,5 @@
 /* Class:       {{ api_name }}
- * Created On:  {{ today }}
+ * Created On:  
  * Created by:  OpFocus Team
  * Description: Class to Schedule Apex
  */
@@ -17,9 +17,6 @@ global class {{ api_name }} implements Schedulable {
 
     // use this methid to run this job once manually
     public static void manual() {
-
-        // first delete the job if it already exists
-        BatchJobHelper.DeleteJobs('{{ api_name }} Manual') ;
 		DateTime dt = system.now().addMinutes(1);
 		String timeForScheduler = dt.format('s m H d M \'?\' yyyy');
 		Id jobid = System.schedule('{{ api_name }} Manual', timeForScheduler, new {{ api_name }}());
@@ -28,36 +25,22 @@ global class {{ api_name }} implements Schedulable {
 
 
 	global void execute(SchedulableContext sc) {
-
-        // Start logging messages for this run of the batch in Batch_Job_Message__c object
-        // Instead of system.debug, use BatchJobHelper.AddMessage(Caller, Message)
-        // it will dd message to  Batch_Job_Message__c object AND do system.debug
-        BatchJobHelper.StartMessages('{{ api_name }}');
-
 		executeLogic();
 	}
 
 	
 	/*webservice static void {{ api_name }}buttonMethod(){
-        BatchJobHelper.StartMessages('{{ api_name }}');
-        BatchJobHelper.AddMessage('{{ api_name }}', 'buttonMethod started', true);
+       
 		executeLogic();
 	}*/
 
 	global static void executeLogic(){
-        try
-        {
-            BatchJobHelper.AddMessage('{{ api_name }}', 'executeLogic started', true);
-
+        try{ 
             // --- Add logic here
             //database.executebatch(new MyBatchClass());
-
-            // insert log messages at the end of your process
-            BatchJobHelper.writeLogs('{{ api_name }}');
         }
-        catch(Exception ex)
-        {
-            BatchJobHelper.exceptionHandler('{{ api_name }}', ex);
+        catch(Exception ex){
+            
         }
 	}
 }

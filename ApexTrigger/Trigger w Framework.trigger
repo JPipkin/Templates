@@ -1,7 +1,7 @@
 /*
 ** Trigger: {{ api_name }}
 ** SObject: {{ object_name }}
-** Created by OpFocus on {{ today }}
+** Created by OpFocus on 
 ** Description: 
 **		+ 
 */
