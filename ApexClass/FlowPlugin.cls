@@ -1,7 +1,7 @@
-public class {{ api_name }} {
+global class {{ api_name }} {
 
     @InvocableMethod(label='{{ title }}')
-    public static void {{ method_name }}({{ input_info }}){
+    global static void {{ method_name }}({{ input_info }}){
 
     }
 }
