@@ -26,7 +26,7 @@
         },
         {
             "name"          : "Trigger no Framework",
-            "file_name"     : "Trigger no Framework.trigger",
+            "file_name"     : "trigger no framework.trigger",
             "description"   : "Trigger no Framework template",
             "author"        : "John Pipkin",
             "params"        : [ 
