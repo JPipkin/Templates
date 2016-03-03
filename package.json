@@ -182,6 +182,19 @@
            ]
         },
         {
+            "name"          : "Http Mock",
+            "file_name"     : "Http Mock.cls",
+            "description"   : "Mock for Http Callouts",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                }
+           ]
+        },
+        {
             "name"          : "Public No Constructor",
             "file_name"     : "PublicNoConstructor.cls",
             "description"   : "Public with No Constructor Class",
@@ -198,6 +211,19 @@
             "name"          : "Public with Constructor",
             "file_name"     : "PublicWithConstructor.cls",
             "description"   : "Public with Constructor Class",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                }
+           ]
+        },
+        {
+            "name"          : "Singleton",
+            "file_name"     : "Singleton.cls",
+            "description"   : "Singleton Class",
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
@@ -314,6 +340,19 @@
                     "name"          : "batch_class",
                     "description"   : "Batch Class Name",
                     "default"       : "BatchClassName"
+                }
+           ]
+        },
+        {
+            "name"          : "Webservice Mock",
+            "file_name"     : "Webservice Mock.cls",
+            "description"   : "Webservice Mock Class",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
                 }
            ]
         }
