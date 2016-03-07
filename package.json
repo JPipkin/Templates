@@ -151,6 +151,13 @@
                     "default"       : "Variable"
                 }
            ]
+        },//EmailService.cls
+        {
+            "name"          : "Email Service",
+            "file_name"     : "EmailService.cls",
+            "description"   : "Custom Email Handler",
+            "author"        : "John Pipkin",
+            "params"        : [ ]
         },
         {
             "name"          : "Flow Plugin",
