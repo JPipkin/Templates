@@ -202,6 +202,19 @@
            ]
         },
         {
+            "name"          : "Inbound Email Handler",
+            "file_name"     : "InboundEmailHandler.cls",
+            "description"   : "Inbound Email Handler",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                }
+           ]
+        },
+        {
             "name"          : "Public No Constructor",
             "file_name"     : "PublicNoConstructor.cls",
             "description"   : "Public with No Constructor Class",
