@@ -65,7 +65,8 @@ global class EmailService {
 					'limit for the org would be exceeded by this request<br/><br/></u>');
 
 			}
-			if(ex_msg.containsIgnoreCase('Single email is not enabled for your organization')){
+			if(ex_msg.containsIgnoreCase('Single email is not enabled for your organization') ||
+				ex_msg.containsIgnoreCase('The organization is not permitted to send email')){
 				if(!Test.isRunningTest() || testArgs.overrideTestContext){
 					//Email deliverability is turned off
     				throwError('<u><br/><br/>Email deliverability has been turned off for this organization.<br/><br/></u>'.toUpperCase());
@@ -83,7 +84,7 @@ global class EmailService {
 
 	private static void throwError(String msg){
 		if(msg.containsIgnoreCase('The organization is not permitted to send email')){
-			msg = '<u>Email deliverability has been turned off for this organization.</u>'.toUpperCase();
+			msg = 'Email deliverability has been turned off for this organization.'.toUpperCase();
 		}
 		if(Trigger.isExecuting){
 			if(Trigger.isDelete){
