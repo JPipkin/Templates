@@ -17,22 +17,19 @@ public class TestEmailService {
 			if(e.getMessage().containsIgnoreCase('The organization is not permitted to send email')){
 				emailTurnedOff = true;
 			}
-			system.debug('=====> is email turned off: ' + emailTurnedOff);
 		}
 	}
 
 	static testMethod void myTest1() {
 		prepare();
 		List<Messaging.SingleEmailMessage> mailList = (List<Messaging.SingleEmailMessage>) buildEmailList(false,200,null);
-			
-		system.debug('=====> is email turned off: ' + emailTurnedOff);
+		
 		if(emailTurnedOff){
 			try{
 				EmailService.sendEmails(mailList);
 				system.assert(false);
 			}catch(Exception e1){
 				String msg = e1.getMessage();
-				system.debug('=====> error: ' + msg);
 				system.assert(msg.containsIgnoreCase('Email deliverability has been turned off'));
 			}
 			EmailService.TestOptions opt = new EmailService.TestOptions();
@@ -52,7 +49,6 @@ public class TestEmailService {
 			}
 			catch(Exception e2){
 				String msg = e2.getMessage();
-				system.debug('=====> error: ' + msg);
 				system.assert(msg.containsIgnoreCase('Email deliverability has been turned off'));
 			}
 		}
@@ -62,7 +58,6 @@ public class TestEmailService {
 				system.assert(false);
 			}catch(Exception e1){
 				String msg = e1.getMessage();
-				system.debug('=====> error: ' + msg);
 				system.assert(msg.containsIgnoreCase('The daily single email limit'));
 			}
 			EmailService.TestOptions opt = new EmailService.TestOptions();
@@ -76,7 +71,6 @@ public class TestEmailService {
 			}
 			catch(Exception e2){
 				String msg = e2.getMessage();
-				system.debug('=====> error: ' + msg);
 				system.assert(msg.containsIgnoreCase('Email deliverability has been turned off'));
 			}
 			opt.overrideTestContext = false;
@@ -109,7 +103,6 @@ public class TestEmailService {
 				system.assert(false);
 			}catch(Exception e1){
 				String msg = e1.getMessage();
-				system.debug('=====> error: ' + msg);
 				system.assert(msg.containsIgnoreCase('Email deliverability has been turned off'));
 			}
 			EmailService.TestOptions opt = new EmailService.TestOptions();
@@ -119,7 +112,6 @@ public class TestEmailService {
 				EmailService.sendEmails(mailList,true);
 				system.assert(true);
 			}catch(Exception e1){
-				system.debug('=====> error: ' + e1.getMessage());
 				system.assert(false);
 			}
 			opt.overrideTestContext = true;
@@ -143,7 +135,6 @@ public class TestEmailService {
 				system.assert(false);
 			}catch(Exception e1){
 				String msg = e1.getMessage();
-				system.debug('=====> error: ' + msg);
 				system.assert(msg.containsIgnoreCase('The daily single email limit'));
 			}
 		}
@@ -153,8 +144,7 @@ public class TestEmailService {
 	static testMethod void myTest4(){
 		prepare();
 		List<Messaging.SingleEmailMessage> mailList = (List<Messaging.SingleEmailMessage>) buildEmailList(false,2,null);
-			
-		system.debug('=====> is email turned off: ' + emailTurnedOff);
+		
 		if(!emailTurnedOff){
 			EmailService.TestOptions opt = new EmailService.TestOptions();
 			try{
@@ -170,8 +160,7 @@ public class TestEmailService {
 	static testMethod void myTest5(){
 		prepare();
 		List<Messaging.SingleEmailMessage> mailList = (List<Messaging.SingleEmailMessage>) buildEmailList(false,1,null);
-			
-		system.debug('=====> is email turned off: ' + emailTurnedOff);
+		
 		if(!emailTurnedOff){
 			EmailService.TestOptions opt = new EmailService.TestOptions();
 			try{
@@ -217,7 +206,6 @@ public class TestEmailService {
 		else{
 			Messaging.MassEmailMessage emails = new Messaging.MassEmailMessage();
 			emails.setTargetObjectIds(targetIds);
-			//emails.setSubject('Test');
 			emails.setTemplateId([Select Id from EmailTemplate limit 1].Id);
 			emails.setSaveAsActivity(false);
 			lstMass.add(emails);

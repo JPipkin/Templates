@@ -60,7 +60,6 @@ global class EmailService {
 				ex_msg = ex.getMessage();	
 				ex_type = ex.getTypeName();
 			} 
-			system.debug('=====> original error: ' + ex_msg);
 			if(ex_type == 'System.HandledException' || testArgs.isHandledException){
 				throwError('<u><br/><br/>The daily '+ (isMassEmail?'mass email ':'single email ') +
 					'limit for the org would be exceeded by this request<br/><br/></u>');
