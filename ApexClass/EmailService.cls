@@ -16,24 +16,17 @@ global class EmailService {
 
 	//constructors 
 	//START----------------------------------------------------
-	global static void sendEmails(List<Messaging.SingleEmailMessage> lstOfMail){
-		mail = null;
+	global static void sendEmails(Object lstOfMail){
 		mail = lstOfMail;
 		isMassEmail = false;
 		emailHandler();
 	}
 	global static void sendEmails(Object lstOfMail, Boolean isMass){
-		mail = null;
 		mail = lstOfMail;
 		isMassEmail = isMass;
 		emailHandler();
 	}
-	global static void sendEmails(Messaging.SingleEmailMessage singleEmail){
-		mail = null;
-		mail = new Messaging.SingleEmailMessage[] {singleEmail};
-		isMassEmail = false;
-		emailHandler();
-	}
+	
 	//constructors
 	//END ----------------------------------------------------
 
@@ -47,6 +40,9 @@ global class EmailService {
 		}
 		else if( mail instanceof Messaging.MassEmailMessage[]){
 			lstMailMass = (List<Messaging.MassEmailMessage>) mail;
+		}
+		else if(mail instanceof Messaging.SingleEmailMessage){
+			lstMailSingle = new Messaging.SingleEmailMessage[] {mail};
 		}
 		try{
 			if(isMassEmail){
