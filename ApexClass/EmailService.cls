@@ -10,8 +10,9 @@
  
 global class EmailService {
 
-	private static List<Messaging.SingleEmailMessage> lstMail;
-	private static Boolean isMassEmail;
+	@TestVisible private static List<Messaging.SingleEmailMessage> lstMail;
+	@TestVisible private static Boolean isMassEmail;
+
 
 	//constructors 
 	//START----------------------------------------------------
@@ -25,12 +26,17 @@ global class EmailService {
 		isMassEmail = isMass;
 		emailHandler();
 	}
+	global static void sendEmails(Messaging.SingleEmailMessage singleEmail){
+		lstMail = new Messaging.SingleEmailMessage[] {singleEmail};
+		isMassEmail = false;
+		emailHandler();
+	}
 	//constructors
 	//END ----------------------------------------------------
 
 	//Handler
 	private static void emailHandler(){
-		//check if transaction will cause limit to be reached
+		//check if transaction will cause limit to be reached and then send email
 		try{
 			if(isMassEmail){
 				Messaging.reserveMassEmailCapacity(lstMail.size());
@@ -38,23 +44,19 @@ global class EmailService {
 			else{
 				Messaging.reserveSingleEmailCapacity(lstMail.size());
 			}
-		}
-		catch(System.HandledException limitEx){
-			throw new EmailCustomException('<u><br/><br/>The daily '+ (isMassEmail?'mass email ':'single email ') +
-				'limit for the org would be exceeded by this request<br/><br/></u>');
-			return;
-		}
-
-		//try to send email
-		try{
 			Messaging.sendEmail(lstMail);
 		}
 		catch(Exception ex){
 			String ex_msg = ex.getMessage();
+			if(ex.getTypeName() == 'System.HandledException'){
+				throwError('<u><br/><br/>The daily '+ (isMassEmail?'mass email ':'single email ') +
+					'limit for the org would be exceeded by this request<br/><br/></u>');
+				return;
+			}
 			if(ex_msg.containsIgnoreCase('Single email is not enabled for your organization')){
 				if(!Test.isRunningTest()){
 					//Email deliverability is turned off
-    				throw new EmailCustomException('<u><br/><br/>Email deliverability has been turned off for this organization.<br/><br/></u>'.toUpperCase());
+    				throwError('<u><br/><br/>Email deliverability has been turned off for this organization.<br/><br/></u>'.toUpperCase());
     				return;
     			}
     			else{
@@ -63,7 +65,21 @@ global class EmailService {
     			}
 			}
 			//other exception, throw
-			throw new EmailCustomException(ex_msg);
+			throwError(ex_msg);
+		}
+			
+	}
+
+	private static void throwError(String msg){
+		if(Trigger.isExecuting){
+			if(Trigger.isDelete){
+				Trigger.old[0].addError(msg);
+			}
+			else{
+				Trigger.new[0].addError(msg);
+			}
+		}else{
+			throw new EmailCustomException(msg);
 		}
 	}
 
