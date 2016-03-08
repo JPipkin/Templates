@@ -157,7 +157,13 @@
             "file_name"     : "EmailService.cls",
             "description"   : "Custom Email Handler",
             "author"        : "John Pipkin",
-            "params"        : [ ]
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                }
+            ]
         },
         {
             "name"          : "Flow Plugin",
@@ -307,7 +313,13 @@
             "file_name"     : "TestEmailService.cls",
             "description"   : "Test for Email Service",
             "author"        : "John Pipkin",
-            "params"        : [ ]
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                }
+            ]
         },
         {
             "name"          : "Trigger Handler",
