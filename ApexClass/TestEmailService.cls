@@ -173,7 +173,7 @@ public class TestEmailService {
 		}
 
 		List<id> lstIds = new List<Id>();
-		for(User u :[Select Id from User where isActive=true Limit 10]){
+		for(User u :[Select Id from User where Id =:UserInfo.getUserId()]){
 			lstIds.add(u.Id);
 		}
 		List<Messaging.MassEmailMessage> mailList2 = (List<Messaging.MassEmailMessage>) buildEmailList(true, 0, lstIds);
