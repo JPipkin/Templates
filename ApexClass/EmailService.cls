@@ -42,7 +42,7 @@ global class EmailService {
 			lstMailMass = (List<Messaging.MassEmailMessage>) mail;
 		}
 		else if(mail instanceof Messaging.SingleEmailMessage){
-			lstMailSingle = new Messaging.SingleEmailMessage[] {mail};
+			lstMailSingle = new Messaging.SingleEmailMessage[] {(Messaging.SingleEmailMessage)mail};
 		}
 		try{
 			if(isMassEmail){
