@@ -10,24 +10,27 @@
  
 global class EmailService {
 
-	@TestVisible private static List<Messaging.SingleEmailMessage> lstMail;
+	@TestVisible private static Object mail;
 	@TestVisible private static Boolean isMassEmail;
-
+	@TestVisible private static TestOptions testArgs = new TestOptions();
 
 	//constructors 
 	//START----------------------------------------------------
 	global static void sendEmails(List<Messaging.SingleEmailMessage> lstOfMail){
-		lstMail = lstOfMail;
+		mail = null;
+		mail = lstOfMail;
 		isMassEmail = false;
 		emailHandler();
 	}
-	global static void sendEmails(List<Messaging.SingleEmailMessage> lstOfMail, Boolean isMass){
-		lstMail = lstOfMail;
+	global static void sendEmails(Object lstOfMail, Boolean isMass){
+		mail = null;
+		mail = lstOfMail;
 		isMassEmail = isMass;
 		emailHandler();
 	}
 	global static void sendEmails(Messaging.SingleEmailMessage singleEmail){
-		lstMail = new Messaging.SingleEmailMessage[] {singleEmail};
+		mail = null;
+		mail = new Messaging.SingleEmailMessage[] {singleEmail};
 		isMassEmail = false;
 		emailHandler();
 	}
@@ -37,27 +40,46 @@ global class EmailService {
 	//Handler
 	private static void emailHandler(){
 		//check if transaction will cause limit to be reached and then send email
+		List<Messaging.SingleEmailMessage> lstMailSingle;
+		List<Messaging.MassEmailMessage> lstMailMass;
+		if(mail instanceof Messaging.SingleEmailMessage[]){
+			lstMailSingle = (List<Messaging.SingleEmailMessage>) mail;
+		}
+		else if( mail instanceof Messaging.MassEmailMessage[]){
+			lstMailMass = (List<Messaging.MassEmailMessage>) mail;
+		}
 		try{
 			if(isMassEmail){
-				Messaging.reserveMassEmailCapacity(lstMail.size());
+				if(!testArgs.skipReserve)Messaging.reserveMassEmailCapacity(lstMailMass.size());
+				Messaging.sendEmail(lstMailMass);
 			}
 			else{
-				Messaging.reserveSingleEmailCapacity(lstMail.size());
+				if(!testArgs.skipReserve)Messaging.reserveSingleEmailCapacity(lstMailSingle.size());
+				Messaging.sendEmail(lstMailSingle);
 			}
-			Messaging.sendEmail(lstMail);
+			
 		}
 		catch(Exception ex){
-			String ex_msg = ex.getMessage();
-			if(ex.getTypeName() == 'System.HandledException'){
+			String ex_msg;
+			String ex_type;
+			if(testArgs.overwriteException){
+				ex_msg = testArgs.newExceptionMsg;
+				ex_type = null;
+			}
+			else{
+				ex_msg = ex.getMessage();	
+				ex_type = ex.getTypeName();
+			} 
+			system.debug('=====> original error: ' + ex_msg);
+			if(ex_type == 'System.HandledException' || testArgs.isHandledException){
 				throwError('<u><br/><br/>The daily '+ (isMassEmail?'mass email ':'single email ') +
 					'limit for the org would be exceeded by this request<br/><br/></u>');
-				return;
+
 			}
 			if(ex_msg.containsIgnoreCase('Single email is not enabled for your organization')){
-				if(!Test.isRunningTest()){
+				if(!Test.isRunningTest() || testArgs.overrideTestContext){
 					//Email deliverability is turned off
     				throwError('<u><br/><br/>Email deliverability has been turned off for this organization.<br/><br/></u>'.toUpperCase());
-    				return;
     			}
     			else{
     				//don't throw any error if context is test
@@ -71,6 +93,9 @@ global class EmailService {
 	}
 
 	private static void throwError(String msg){
+		if(msg.containsIgnoreCase('The organization is not permitted to send email')){
+			msg = '<u>Email deliverability has been turned off for this organization.</u>'.toUpperCase();
+		}
 		if(Trigger.isExecuting){
 			if(Trigger.isDelete){
 				Trigger.old[0].addError(msg);
@@ -84,5 +109,14 @@ global class EmailService {
 	}
 
 	public class EmailCustomException extends Exception{}
+
+	@TestVisible
+	private class TestOptions{
+		@TestVisible Boolean isHandledException = false;
+		@TestVisible Boolean skipReserve = false;
+		@TestVisible Boolean overrideTestContext = false;
+		@TestVisible Boolean overwriteException = false;
+		@TestVisible String newExceptionMsg;
+	}
 
 }

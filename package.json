@@ -303,6 +303,13 @@
            ]
         },
         {
+            "name"          : "Test for Email Service",
+            "file_name"     : "TestEmailService.cls",
+            "description"   : "Test for Email Service",
+            "author"        : "John Pipkin",
+            "params"        : [ ]
+        },
+        {
             "name"          : "Trigger Handler",
             "file_name"     : "TriggerHandler.cls",
             "description"   : "Trigger Handler template",
