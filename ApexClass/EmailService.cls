@@ -10,28 +10,22 @@
  
 global class EmailService {
 
-	@TestVisible private static Object mail;
-	@TestVisible private static Boolean isMassEmail;
 	@TestVisible private static TestOptions testArgs = new TestOptions();
 
 	//constructors 
 	//START----------------------------------------------------
 	global static void sendEmails(Object lstOfMail){
-		mail = lstOfMail;
-		isMassEmail = false;
-		emailHandler();
+		emailHandler(lstOfMail, false);
 	}
 	global static void sendEmails(Object lstOfMail, Boolean isMass){
-		mail = lstOfMail;
-		isMassEmail = isMass;
-		emailHandler();
+		emailHandler(lstOfMail, isMass);
 	}
 	
 	//constructors
 	//END ----------------------------------------------------
 
 	//Handler
-	private static void emailHandler(){
+	private static void emailHandler(Object mail, Boolean isMassEmail){
 		//check if transaction will cause limit to be reached and then send email
 		List<Messaging.SingleEmailMessage> lstMailSingle;
 		List<Messaging.MassEmailMessage> lstMailMass;
