@@ -1,0 +1,6 @@
+<apex:component>
+	
+	<apex:attribute name="AttrName" description="Description" type="String" required="true"/>
+ 	<apex:attribute name="AttrName2" description="Description" type="String" required="true"/>
+ 	
+</apex:component>
