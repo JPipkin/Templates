@@ -58,6 +58,21 @@
            ]
         }
     ],
+    "ApexComponent" : [
+        {
+            "name"          : "Component",
+            "file_name"     : "Component.component",
+            "description"   : "Visualforce Page template",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Apex Component API Name",
+                    "default"       : "api"
+                }
+           ]
+        }
+    ],
     "ApexClass" :  [
 
         {
