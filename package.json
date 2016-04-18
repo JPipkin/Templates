@@ -213,7 +213,7 @@
             "name"          : "Http Mock",
             "file_name"     : "Http Mock.cls",
             "description"   : "Mock for Http Callouts",
-            "author"        : "John Pipkin",
+            "author"        : "MM",
             "params"        : [ 
                 {   
                     "name"          : "api_name",
@@ -265,7 +265,7 @@
             "name"          : "Singleton",
             "file_name"     : "Singleton.cls",
             "description"   : "Singleton Class",
-            "author"        : "John Pipkin",
+            "author"        : "MM",
             "params"        : [ 
                 {   
                     "name"          : "api_name",
@@ -359,7 +359,13 @@
             "file_name"     : "TriggerHandlerUtils.cls",
             "description"   : "General Trigger Handler template",
             "author"        : "John Pipkin",
-            "params"        : [ ]
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "TriggerHandler"
+                }
+            ]
         },
         {
             "name"          : "Unit Test",
