@@ -245,6 +245,11 @@
                     "name"          : "api_name",
                     "description"   : "Class Name",
                     "default"       : "ClassName"
+                },
+                {   
+                    "name"          : "today",
+                    "description"   : "Date stamp",
+                    "default"       : "No Input needed"
                 }
            ]
         },

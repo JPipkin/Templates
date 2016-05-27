@@ -1,5 +1,5 @@
 /* Class:       {{ api_name }}
- * Created On:  
+ * Created On:  {{ today }}
  * Created by:  OpFocus Team
  * Description: 
  */
