@@ -1,0 +1,1773 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"t",
+				"PUBLIC testInstall(system.InstallHandler script, system.Version version) 	void"
+			],
+			[
+				"SmartDe",
+				"SmartDeploy_PostInstall	[Custom Apex Class]"
+			],
+			[
+				"Tool",
+				"ToolingVersion__c	[Sobject Name]"
+			],
+			[
+				"Depl",
+				"PUBLIC DeployError(String e)"
+			],
+			[
+				"Packagebui",
+				"PackageBuilderCtrl	[Custom Apex Class]"
+			],
+			[
+				"getPR",
+				"getParameters"
+			],
+			[
+				"type",
+				"typeswithFolder"
+			],
+			[
+				"Select",
+				"SelectOption	[Standard Apex Class]"
+			],
+			[
+				"Too",
+				"ToolingVersion__c	[Sobject Name]"
+			],
+			[
+				"sele",
+				"selectedMtype"
+			],
+			[
+				"get",
+				"PUBLIC getMessage() 	String"
+			],
+			[
+				"ser",
+				"PUBLIC serializePretty(Object o) 	String"
+			],
+			[
+				"Selec",
+				"SelectOption	[Standard Apex Class]"
+			],
+			[
+				"map",
+				"mapSelectOption"
+			],
+			[
+				"imp",
+				"impl_cls"
+			],
+			[
+				"trans",
+				"transformGroup"
+			],
+			[
+				"init",
+				"init_lookup5Bin"
+			],
+			[
+				"acces",
+				"access_token"
+			],
+			[
+				"lstc",
+				"lstConnection"
+			],
+			[
+				"log",
+				"loginUIComp"
+			],
+			[
+				"loginUI",
+				"loginUIComp"
+			],
+			[
+				"Package",
+				"PackageBuilderCtrl	[Custom Apex Class]"
+			],
+			[
+				"re",
+				"reRender	(Object)"
+			],
+			[
+				"loca",
+				"localAttachment"
+			],
+			[
+				"login",
+				"loginprop"
+			],
+			[
+				"pr",
+				"PUBLIC property	Object"
+			],
+			[
+				"O",
+				"OAuth2	[Custom Apex Class]"
+			],
+			[
+				"se",
+				"PUBLIC serialize(Object o) 	String"
+			],
+			[
+				"e",
+				"PUBLIC error_description	String"
+			],
+			[
+				"lo",
+				"PUBLIC loginprop	Object"
+			],
+			[
+				"Packag",
+				"PackageBuilderCtrl	[Custom Apex Class]"
+			],
+			[
+				"con",
+				"PUBLIC myconnectionId	Id"
+			],
+			[
+				"getU",
+				"PUBLIC getUserId() 	String"
+			],
+			[
+				"Retriev",
+				"RetrieveXML__c	[Sobject Name]"
+			],
+			[
+				"sfi",
+				"sfInstance"
+			],
+			[
+				"substr",
+				"substringAfterLast"
+			],
+			[
+				"I",
+				"PUBLIC id	String"
+			],
+			[
+				"sfin",
+				"sfInstance2"
+			],
+			[
+				"sfinat",
+				"sfInstance"
+			],
+			[
+				"conta",
+				"containsIgnoreCase"
+			],
+			[
+				"User",
+				"UserInfo	[Standard Apex Class]"
+			],
+			[
+				"uplo",
+				"uploadZ"
+			],
+			[
+				"substring",
+				"PUBLIC substringAfterLast(String separator) 	String"
+			],
+			[
+				"connec",
+				"containsIgnoreCase"
+			],
+			[
+				"record",
+				"recordExtId"
+			],
+			[
+				"clien",
+				"clientSecret"
+			],
+			[
+				"assert",
+				"assert()"
+			],
+			[
+				"P",
+				"Password_Security_Token__c"
+			],
+			[
+				"Mana",
+				"ManagePackagePasswordsCtrl	[Custom Apex Class]"
+			],
+			[
+				"s",
+				"PUBLIC setCurrentPage(Object pageReference) 	void"
+			],
+			[
+				"des",
+				"PUBLIC deserializeUntyped(String jsonString) 	Object"
+			],
+			[
+				"serial",
+				"PUBLIC serializePretty(Object o) 	String"
+			],
+			[
+				"att",
+				"Attributes"
+			],
+			[
+				"Packa",
+				"Package_Password_Id__c 	Text"
+			],
+			[
+				"set",
+				"PUBLIC setEndpoint(String endpoint) 	void"
+			],
+			[
+				"Retrieve",
+				"RetrieveMetadataReader	[Custom Apex Class]"
+			],
+			[
+				"Compone",
+				"ComponentData"
+			],
+			[
+				"LastMO",
+				"LastModifiedDate"
+			],
+			[
+				"de",
+				"default	(String)"
+			],
+			[
+				"bol",
+				"bolder"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"input",
+				"apex:inputHidden"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"hello",
+				"helloWorld"
+			],
+			[
+				"Pack",
+				"PackagePassword__c"
+			],
+			[
+				"o",
+				"PUBLIC oAuthLogin(Boolean sandbox, String un, String pw) 	JSONReturn"
+			],
+			[
+				"unes",
+				"PUBLIC unescapeEcmaScript() 	String"
+			],
+			[
+				"st",
+				"style	Attr"
+			],
+			[
+				"dec",
+				"PUBLIC decryptWithManagedIV(String algorithmName, Blob secretKey, Blob encryptedData) 	Blob"
+			],
+			[
+				"encr",
+				"PUBLIC encryptWithManagedIV(String algorithmName, Blob secretKey, Blob clearData) 	Blob"
+			],
+			[
+				"small",
+				"small-caption"
+			],
+			[
+				"escap",
+				"PUBLIC escapeSingleQuotes(String s) 	String"
+			],
+			[
+				"output",
+				"apex:outputPanel"
+			],
+			[
+				"outpu",
+				"apex:outputPanel"
+			],
+			[
+				"ac",
+				"action	(ApexPages.Action)"
+			],
+			[
+				"in",
+				"init_NewRecords"
+			],
+			[
+				"lst",
+				"lstNewPasswords"
+			],
+			[
+				"a",
+				"action	(ApexPages.Action)"
+			],
+			[
+				"com",
+				"apex:commandButton"
+			],
+			[
+				"actio",
+				"apex:actionSupport"
+			],
+			[
+				"inp",
+				"apex:inputField"
+			],
+			[
+				"esc",
+				"PUBLIC escapeSingleQuotes(String s) 	String"
+			],
+			[
+				"clie",
+				"clientId"
+			],
+			[
+				"u",
+				"PUBLIC urlEncode(String s, String enc) 	String"
+			],
+			[
+				"selected",
+				"selectedPW"
+			],
+			[
+				"bui",
+				"PUBLIC buildAsyncResult() 	AsyncResult"
+			],
+			[
+				"savexml",
+				"PUBLIC saveXML(String status, Boolean showMsg) 	PageReference"
+			],
+			[
+				"save",
+				"PUBLIC saveXML(String status) 	PageReference"
+			],
+			[
+				"Retrie",
+				"RetrieveXML__c"
+			],
+			[
+				"Att",
+				"Attachment"
+			],
+			[
+				"va",
+				"var	(String)"
+			],
+			[
+				"Deplo",
+				"DeployError"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"Meta",
+				"MetaDataRetrieveZip"
+			],
+			[
+				"i",
+				"PUBLIC CustomSetting	Boolean"
+			],
+			[
+				"Page",
+				"PageReference	[Standard Apex Class]"
+			],
+			[
+				"deseriali",
+				"PUBLIC deserialize(String jsonString, system.Type apexType) 	Object"
+			],
+			[
+				"RetrieveEx",
+				"RetrieveException"
+			],
+			[
+				"pa",
+				"apex:param"
+			],
+			[
+				"action",
+				"apex:actionFunction"
+			],
+			[
+				"XmlDat",
+				"XMLData"
+			],
+			[
+				"render",
+				"renderXML"
+			],
+			[
+				"pack",
+				"packageSize"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"stan",
+				"standardStylesheets	(Boolean)"
+			],
+			[
+				"sho",
+				"showHeader	(Boolean)"
+			],
+			[
+				"Apex",
+				"ApexPages	[Standard Apex Class]"
+			],
+			[
+				"show",
+				"showMsg"
+			],
+			[
+				"v",
+				"var	(String)"
+			],
+			[
+				"retrievere",
+				"retrieverecord"
+			],
+			[
+				"Create",
+				"CreatedDate"
+			],
+			[
+				"pm",
+				"pmsg"
+			],
+			[
+				"is",
+				"isoCode"
+			],
+			[
+				"PriceB",
+				"PricebookEntry	[Sobject Name]"
+			],
+			[
+				"data",
+				"Database"
+			],
+			[
+				"Exchange",
+				"Exchange_Rate__c"
+			],
+			[
+				"Opp",
+				"OpportunityLineItem	[Sobject Name]"
+			],
+			[
+				"Oppo",
+				"OpportunityLineItem"
+			],
+			[
+				"onl",
+				"onlyProject"
+			],
+			[
+				"on",
+				"onlyProject"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"depl",
+				"PUBLIC deploymentComplete	Boolean"
+			],
+			[
+				"check",
+				"PUBLIC checkDeployAsyncRequest() 	PageReference"
+			],
+			[
+				"select",
+				"PUBLIC selectedPW2	String"
+			],
+			[
+				"zi",
+				"PUBLIC uploadedZip	Blob"
+			],
+			[
+				"upload",
+				"PUBLIC uploadZippy() 	void"
+			],
+			[
+				"rende",
+				"PUBLIC renderXML() 	void"
+			],
+			[
+				"assertE",
+				"assertEquals()"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 147.0,
+		"last_filter": "clean",
+		"selected_items":
+		[
+			[
+				"clean",
+				"MavensMate: Clean Project..."
+			],
+			[
+				"edit",
+				"MavensMate: Edit Project..."
+			],
+			[
+				"new pro",
+				"MavensMate: New Project..."
+			],
+			[
+				"start",
+				"MavensMate: Start Logging"
+			],
+			[
+				"flush",
+				"MavensMate: Flush Debug Logs"
+			],
+			[
+				"edi",
+				"MavensMate: Edit Project..."
+			],
+			[
+				"ed",
+				"MavensMate: Edit Project..."
+			],
+			[
+				"new sc",
+				"MavensMate: New Apex Script..."
+			],
+			[
+				"clea",
+				"MavensMate: Clean Project..."
+			],
+			[
+				"stop",
+				"MavensMate: Stop Logging"
+			],
+			[
+				"new pr",
+				"MavensMate: New Project..."
+			],
+			[
+				"new comp",
+				"MavensMate: New Visualforce Component"
+			],
+			[
+				"run",
+				"MavensMate: Run Apex Unit Test Methods For This Class"
+			],
+			[
+				"flu",
+				"MavensMate: Flush Debug Logs"
+			],
+			[
+				"compo",
+				"MavensMate: New Visualforce Component"
+			],
+			[
+				"edit pr",
+				"Project: Edit Project"
+			],
+			[
+				"flus",
+				"MavensMate: Flush Debug Logs"
+			],
+			[
+				"new cl",
+				"MavensMate: New Apex Class"
+			],
+			[
+				"new vsi",
+				"MavensMate: New Visualforce Page"
+			],
+			[
+				"open",
+				"MavensMate: Open Salesforce Org"
+			],
+			[
+				"edit pro",
+				"MavensMate: Edit Project..."
+			],
+			[
+				"ope",
+				"MavensMate: Open Salesforce Org"
+			],
+			[
+				"ex",
+				"MavensMate: Execute Apex..."
+			],
+			[
+				"op",
+				"MavensMate: Open Salesforce Org"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"exec",
+				"MavensMate: Execute Apex..."
+			],
+			[
+				"new",
+				"MavensMate: New Visualforce Page"
+			],
+			[
+				"depl",
+				"MavensMate: Deploy To Server..."
+			],
+			[
+				"new p",
+				"MavensMate: New Project..."
+			],
+			[
+				"compone",
+				"MavensMate: New Visualforce Component"
+			],
+			[
+				"new vis",
+				"MavensMate: New Visualforce Page"
+			],
+			[
+				"new po",
+				"MavensMate: New Project..."
+			],
+			[
+				"exe",
+				"MavensMate: Execute Apex..."
+			],
+			[
+				"save",
+				"MavensMate: Force Save Current File"
+			],
+			[
+				"newcl",
+				"MavensMate: New Apex Class"
+			],
+			[
+				"new c",
+				"MavensMate: New Apex Class"
+			],
+			[
+				"execu",
+				"MavensMate: Execute Apex..."
+			],
+			[
+				"new v",
+				"MavensMate: New Visualforce Component"
+			],
+			[
+				"new com",
+				"MavensMate: New Visualforce Component"
+			],
+			[
+				"flsu",
+				"MavensMate: Flush Debug Logs"
+			],
+			[
+				"doc",
+				"DocBlockr: Decorate line comment"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"refresh",
+				"MavensMate: Refresh Apex Code Symbols"
+			],
+			[
+				"new ",
+				"MavensMate: New Apex Class"
+			],
+			[
+				"refre",
+				"MavensMate: Refresh Apex Code Symbols"
+			],
+			[
+				"CLEAN",
+				"MavensMate: Clean Project..."
+			],
+			[
+				"new pag",
+				"MavensMate: New Visualforce Page"
+			],
+			[
+				"sales",
+				"MavensMate: Open Salesforce Org"
+			],
+			[
+				"ru",
+				"MavensMate: Run Apex Tests..."
+			],
+			[
+				"flusg",
+				"MavensMate: Flush Debug Logs"
+			],
+			[
+				"apex",
+				"MavensMate: Execute Apex..."
+			],
+			[
+				"open s",
+				"MavensMate: Open Salesforce Org"
+			],
+			[
+				"flush de",
+				"MavensMate: Flush Debug Logs"
+			],
+			[
+				"statr",
+				"MavensMate: Start Logging"
+			],
+			[
+				"comp",
+				"MavensMate: New Visualforce Component"
+			],
+			[
+				"tri",
+				"MavensMate: New Apex Trigger"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jpipkin/Desktop/Templates"
+	],
+	"file_history":
+	[
+		"/Users/jpipkin/Desktop/Templates/ApexClass/Webservice Mock.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/UnitTestSchedulableBatchable.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/UnitTest.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/TriggerHandlerUtils.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/TriggerHandler.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/TestEmailService.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/Singleton.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/SchedulableClass.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/SchedulableBatchClass.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/QueueableClass.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/PublicWithConstructor.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/PublicNoConstructor.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/Http Mock.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/FlowPlugin.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/EmailService.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/ControllerExtension.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/BeforeClass.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/BatchClass.cls",
+		"/Users/jpipkin/Desktop/Templates/ApexClass/AfterClass.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/TestSmartDeploy_PostInstall.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/pages/OAuthCallback.page",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/package.xml",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/TestPackageBuilderCtrl.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/PackageBuilderCtrl.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/staticresources/JQuery.resource",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/pages/PackageBuilder.page",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/components/unzippidy.component",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/components/zipFile.component",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/components/SmartDeployOauthLogin.component",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/components/CustomHelpText.component",
+		"/Users/jpipkin/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/customMetadata/Smart_Deploy_Types.ApexClass.md",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/TestManagePackagePasswordsCtrl.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/pages/Bootstrap_v3_3_4.js",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/OAuth2.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/PackageBuilderHelper.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/SmartDeploy_Impl.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/TestHttpMock.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/TestWSMock.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/components/AutoComplete.component",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/jQuery1_11_2.js",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/TestMultiHttpMock.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/TestOAuth2.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/SmartDeploy_OpfocusImpl.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/RetrieveMetadataReader.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/SelectOptionSorter.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/MdApi.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/DebugDeploy.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/apex-scripts/GitHub.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/iControl.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/iSmartLogin.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/components/SmartDeployPwLogin.component",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/TestAC_JSONCtrl.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/debug/logs/2016-06-14 08-29-06.log",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/pages/ManagePackagePasswords.page",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/debug/logs/2016-06-07 10-37-14.log",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/ManagePackagePasswordsCtrl.cls",
+		"/Users/jpipkin/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/jpipkin/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/classes/AC_JSONCtrl.cls",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/components/zippidy.component",
+		"/Users/jpipkin/Downloads/bootstrap-sweetalert/dist/swal-forms.js",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/my.gitignore",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/Deploy DE.sublime-project",
+		"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src/pages/AC_JSON.page",
+		"/Users/jpipkin/Documents/Mavensmate/OpFocus Playground/src/components/zippidy.component",
+		"/Users/jpipkin/Documents/Mavensmate/OpFocus Playground/src/components/zippidyDownload.component",
+		"/Users/jpipkin/Documents/Mavensmate/OpFocus Playground/src/classes/PackageBuilderHelper.cls",
+		"/Users/jpipkin/Documents/Mavensmate/OpFocus Playground/src/classes/TestPackageBuilderCtrl.cls",
+		"/Users/jpipkin/Documents/Mavensmate/OpFocus Playground/src/classes/TestWSMock.cls",
+		"/Users/jpipkin/Documents/Mavensmate/OpFocus Playground/debug/logs/2016-05-16 10-01-20.log",
+		"/Users/jpipkin/Library/Application Support/Sublime Text 3/Packages/MavensMate/sublime/lang/JSON.tmLanguage",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/DebugDeploy.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/SelectOptionSorter.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/RetrieveMetadataReader.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/components/unzippidy.component",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/TestRetrieveGeneratorCtrl.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/pages/PackageBuilder.page",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/PackageBuilderCtrl.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/RetrieveStartCtrl.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/pages/RetrieveGenerator.page",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/PackageBuilderHelper.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/MdApi.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/RetrieveGeneratorCtrl.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/RetrieveGeneratorCtrlExtender.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/pages/OpFocus_Custom_Links.page",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/components/unzip.component",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/components/zippidyDownload.component",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/MultiCurrencyUtils.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/TestMultiHttpMock.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/TestWSMock.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/MetadataRetrieveController.cls",
+		"/Users/jpipkin/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/MetadataService.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/components/zippidy.component",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/components/AutoComplete.component",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/MetadataDeployController.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/components/unzip2.component",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/CreateProjectContract_Ext.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/components/zipFile.component",
+		"/Users/jpipkin/Downloads/jszip (1)/jszip.js",
+		"/Users/jpipkin/Downloads/jszip (1)/jszip-load.js",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/pages/metadataretrieve.page",
+		"/Users/jpipkin/Downloads/retrievedPackage_2016-05-11T11-57-24/classes/HelloWorld.cls",
+		"/Users/jpipkin/Downloads/jszip (1)/jszip-deflate.js",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/pages/metadatadeploy.page",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/components/zipEntry.component",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/components/zip.component",
+		"/Users/jpipkin/Downloads/bootstrap-sweetalert-master/dist/sweetalert.min.js",
+		"/Users/jpipkin/Downloads/sweetalert-master/dist/sweetalert.css",
+		"/Users/jpipkin/Documents/sa_customcss.css",
+		"/Users/jpipkin/Downloads/sweetalert-master/dist/sweetalert.min.js",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/pages/SweetAlert_JS.page",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/components/Invoice.component",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/pages/MSBillingDetailsEditor.page",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/Invoice_Controller.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/MSBillingDetailsEditor_Controller.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/pages/CreateProjectContract.page",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/triggers/Contract.trigger",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/pages/CreateProjectContract2.page",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/TestHttpMock.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/RetrieveRemotingCtrl.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/debug/logs/2016-05-06 13-42-53.log",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/pages/Test.page",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/pages/Invoice.page",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/InvoiceGenerator.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes/InvoiceInstructionsCtrl.cls",
+		"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/components/InvoiceInstructions.component"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/jpipkin/Documents/Mavensmate/Deploy DE/src",
+			"/Users/jpipkin/Documents/Mavensmate/Deploy DE",
+			"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src",
+			"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes",
+			"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src",
+			"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes",
+			"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src",
+			"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes",
+			"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src",
+			"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/triggers",
+			"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src",
+			"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes",
+			"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src",
+			"/Users/jpipkin/Documents/MavensMate/OpFocus Playground/src/classes",
+			"/Users/jpipkin/Documents/MavensMate/Kings Sandbox/src",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"%3A",
+			":",
+			"%2C",
+			"%22",
+			"%7D",
+			"%7B",
+			"p3",
+			"customhelp",
+			"renderTable",
+			"pvxml",
+			"--",
+			"-",
+			")",
+			"'",
+			"new SelectOption('",
+			"36",
+			"33",
+			"34",
+			"Select Id from CustomObject",
+			",'36'",
+			"console.log",
+			"system.debug",
+			"myconnectionId",
+			"step = 5",
+			"name",
+			"url",
+			"SmartDeployOauthLogin",
+			"zipUpload",
+			"zipload",
+			"init_pa",
+			"init_package",
+			"testauth",
+			"saveAsAttachment",
+			"myconnectionId",
+			"parseJsJSON",
+			"lstErrors",
+			"c:",
+			"PackageBuilderHelper",
+			"un1",
+			"instName",
+			"organi",
+			"instName",
+			"localz",
+			"todo",
+			"package_p",
+			"retrievexml",
+			"Package_Password_Id__c",
+			"querystr",
+			"getmeta",
+			"getMeta",
+			"removeRow",
+			"\"",
+			"data",
+			"zip",
+			"inputFile",
+			"zipUpload",
+			"cd.LastModified",
+			"getfiel",
+			"//lstreturn.add",
+			"lstreturn.add",
+			"returnfolders.add",
+			"record.LastModifiedDate",
+			"autocom",
+			"Package_Setting__c",
+			"text_color",
+			"shadow_color",
+			"gradient_colors",
+			"help_text",
+			"+",
+			"checked",
+			"generateHtmlForm",
+			"insertFormInSwalModal",
+			"reduce",
+			"formClass",
+			"generateHtmlForm",
+			"htmlFormString",
+			"insertFormInSwalModal",
+			"super+alt+p",
+			"super+alt+c",
+			"OpFocus55",
+			"pw",
+			"super+shift+right",
+			"password",
+			"username",
+			"auth",
+			"pw2",
+			"User_Name__c",
+			"lster",
+			"password__c",
+			"packagebuilderctrl.metadataretrievezip",
+			"metadataretrievezip",
+			"zd",
+			"metadataretrievezip",
+			"MetaDataRetrieveZip",
+			"zipUpload",
+			"locala",
+			"localat",
+			"usernam",
+			"locala",
+			"PackageBuilderCtrl",
+			"saveAsAttachment()",
+			"retrievere",
+			"MetaDataRetrieveZip",
+			"deployFromExistingZip",
+			"profile",
+			"$Resou",
+			"retrievegenerator",
+			"retrievegeneratorctrl",
+			"componentdat",
+			"RetrieveGeneratorCtrl.",
+			"pw.",
+			"getBuildMsgs",
+			"//getBuildMsgs",
+			"getBuildMsgs",
+			"getbuild",
+			"getorg",
+			"savexml",
+			"problem",
+			"RunTestFailure",
+			"checkPushStatus_element",
+			"PushOptions",
+			"push_element",
+			"savexml",
+			"PushMessage",
+			"PushDetails",
+			"PushResult",
+			"checkPushStatusResponse_element",
+			"build("
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			":",
+			",",
+			":",
+			"\"",
+			"}",
+			"{",
+			"",
+			"//console.log",
+			"//system.debug",
+			"hashstr",
+			"",
+			"lstreturn.add",
+			"//lstreturn.add",
+			"//returnfolders.add",
+			"record",
+			"Package_Password_Id__c",
+			"textColor",
+			"shadowColor",
+			"gradientColors",
+			"helpText",
+			"",
+			"MetadataRetrieveZip",
+			"PackageBuilder",
+			"PackageBuilderCtrl",
+			"PackageBuilderCtrl.",
+			"PayloadTypeMembers",
+			"_md",
+			"Payload",
+			"Get",
+			"get",
+			"Push",
+			"push",
+			"status",
+			"buildEndpoint(false,metaQry,'36')",
+			"buildEndpoint(true,metaQry,'36')",
+			"Name",
+			"MetadataRetrievePageCtrl",
+			"UserWrapper",
+			"{{ api_name }}",
+			"\"",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.MavensMate-OutputPanel":
+	{
+		"height": 238.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Apex Templates Github.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"package",
+				"src/pages/PackageBuilder.page"
+			],
+			[
+				"testpackagebuilderctrl",
+				"src/classes/TestPackageBuilderCtrl.cls"
+			],
+			[
+				"oauth",
+				"src/pages/OAuthCallback.page"
+			],
+			[
+				"pa",
+				"src/classes/PackageBuilderHelper.cls"
+			],
+			[
+				"packab",
+				"src/classes/PackageBuilderCtrl.cls"
+			],
+			[
+				"pack",
+				"src/pages/PackageBuilder.page"
+			],
+			[
+				"packa",
+				"src/pages/PackageBuilder.page"
+			],
+			[
+				"packageb",
+				"src/classes/PackageBuilderHelper.cls"
+			],
+			[
+				"smar",
+				"src/classes/SmartDeploy_Impl.cls"
+			],
+			[
+				"smart",
+				"src/classes/SmartDeploy_OpfocusImpl.cls"
+			],
+			[
+				"icon",
+				"src/classes/iControl.cls"
+			],
+			[
+				"ism",
+				"src/classes/iSmartLogin.cls"
+			],
+			[
+				"oauthca",
+				"src/pages/OAuthCallback.page"
+			],
+			[
+				"oauth2",
+				"src/classes/OAuth2.cls"
+			],
+			[
+				"packagebuilderctrl",
+				"src/classes/PackageBuilderCtrl.cls"
+			],
+			[
+				"opfocu",
+				"src/classes/SmartDeploy_OpfocusImpl.cls"
+			],
+			[
+				"ismart",
+				"src/classes/iSmartLogin.cls"
+			],
+			[
+				"testo",
+				"src/classes/TestOAuth2.cls"
+			],
+			[
+				"testac",
+				"src/classes/TestAC_JSONCtrl.cls"
+			],
+			[
+				"test",
+				"src/classes/TestPackageBuilderCtrl.cls"
+			],
+			[
+				"manag",
+				"src/pages/ManagePackagePasswords.page"
+			],
+			[
+				"smartdeployoauthlogin",
+				"src/components/SmartDeployOauthLogin.component"
+			],
+			[
+				"packag",
+				"src/classes/PackageBuilderHelper.cls"
+			],
+			[
+				"smartdeploypwlogin",
+				"src/components/SmartDeployPwLogin.component"
+			],
+			[
+				"icontrol",
+				"src/classes/iControl.cls"
+			],
+			[
+				"sma",
+				"src/classes/SmartDeploy_OpfocusImpl.cls"
+			],
+			[
+				"oau",
+				"src/classes/OAuth2.cls"
+			],
+			[
+				"testpack",
+				"src/classes/TestPackageBuilderCtrl.cls"
+			],
+			[
+				"packagebuilderhelper",
+				"src/classes/PackageBuilderHelper.cls"
+			],
+			[
+				"oaut",
+				"src/pages/OAuthCallback.page"
+			],
+			[
+				"metada",
+				"src/classes/RetrieveMetadataReader.cls"
+			],
+			[
+				"testpa",
+				"src/classes/TestPackageBuilderCtrl.cls"
+			],
+			[
+				"oauthc",
+				"src/pages/OAuthCallback.page"
+			],
+			[
+				"testpacl",
+				"src/classes/TestPackageBuilderCtrl.cls"
+			],
+			[
+				"testmanagepackagepasswordsctrl",
+				"src/classes/TestManagePackagePasswordsCtrl.cls"
+			],
+			[
+				"managepackagepasswordsctrl",
+				"src/classes/ManagePackagePasswordsCtrl.cls"
+			],
+			[
+				"mana",
+				"src/pages/ManagePackagePasswords.page"
+			],
+			[
+				"pac",
+				"src/pages/PackageBuilder.page"
+			],
+			[
+				"acj",
+				"src/classes/AC_JSONCtrl.cls"
+			],
+			[
+				"testhttpmock",
+				"src/classes/TestHttpMock.cls"
+			],
+			[
+				"retrie",
+				"src/classes/RetrieveMetadataReader.cls"
+			],
+			[
+				"man",
+				"src/pages/ManagePackagePasswords.page"
+			],
+			[
+				"metadat",
+				"src/classes/RetrieveMetadataReader.cls"
+			],
+			[
+				"meta",
+				"src/classes/RetrieveMetadataReader.cls"
+			],
+			[
+				"metad",
+				"src/classes/RetrieveMetadataReader.cls"
+			],
+			[
+				"packagebui",
+				"src/classes/PackageBuilderHelper.cls"
+			],
+			[
+				"p",
+				"src/classes/PackageBuilderCtrl.cls"
+			],
+			[
+				"auto",
+				"src/components/AutoComplete.component"
+			],
+			[
+				"ac",
+				"src/classes/AC_JSONCtrl.cls"
+			],
+			[
+				"ac_jsonctrl",
+				"src/classes/AC_JSONCtrl.cls"
+			],
+			[
+				"testw",
+				"src/classes/TestWSMock.cls"
+			],
+			[
+				"debugdeploy",
+				"src/classes/DebugDeploy.cls"
+			],
+			[
+				"zip",
+				"src/components/zippidy.component"
+			],
+			[
+				"zipp",
+				"src/components/zippidyDownload.component"
+			],
+			[
+				"retrievemetadatareader",
+				"src/classes/RetrieveMetadataReader.cls"
+			],
+			[
+				"sort",
+				"src/classes/SelectOptionSorter.cls"
+			],
+			[
+				"retrievestrt",
+				"src/classes/RetrieveStartCtrl.cls"
+			],
+			[
+				"custom",
+				"src/pages/OpFocus_Custom_Links.page"
+			],
+			[
+				"sele",
+				"src/classes/SelectOptionSorter.cls"
+			],
+			[
+				"retriev",
+				"src/classes/RetrieveGeneratorCtrlExtender.cls"
+			],
+			[
+				"unzip",
+				"src/components/unzip.component"
+			],
+			[
+				"mul",
+				"src/classes/TestMultiHttpMock.cls"
+			],
+			[
+				"mock",
+				"src/classes/TestWSMock.cls"
+			],
+			[
+				"zippi",
+				"src/components/zippidyDownload.component"
+			],
+			[
+				"zid",
+				"src/components/zippidy.component"
+			],
+			[
+				"mdap",
+				"src/classes/MdApi.cls"
+			],
+			[
+				"zippidydownload",
+				"src/components/zippidyDownload.component"
+			],
+			[
+				"create",
+				"src/classes/CreateProjectContract_Ext.cls"
+			],
+			[
+				"metadatadeploycontroller",
+				"src/classes/MetadataDeployController.cls"
+			],
+			[
+				"retri",
+				"src/classes/RetrieveGeneratorCtrlExtender.cls"
+			],
+			[
+				"metadataretrievecontroller",
+				"src/classes/MetadataRetrieveController.cls"
+			],
+			[
+				"zipentry",
+				"src/components/zipEntry.component"
+			],
+			[
+				"testre",
+				"src/classes/TestRetrieveGeneratorCtrl.cls"
+			],
+			[
+				"retrieve",
+				"src/classes/RetrieveGeneratorCtrl.cls"
+			],
+			[
+				"invoice",
+				"src/classes/Invoice_Controller.cls"
+			],
+			[
+				"msbillingdetailseditor",
+				"src/pages/MSBillingDetailsEditor.page"
+			],
+			[
+				"msbillingdetaileditor_controller",
+				"src/classes/MSBillingDetailsEditor_Controller.cls"
+			],
+			[
+				"in",
+				"src/components/Invoice.component"
+			],
+			[
+				"mdapi",
+				"src/classes/MdApi.cls"
+			],
+			[
+				"metdaat",
+				"src/classes/MetadataService.cls"
+			],
+			[
+				"unz",
+				"src/components/unzip2.component"
+			],
+			[
+				"retrievege",
+				"src/pages/RetrieveGenerator.page"
+			],
+			[
+				"invoice_controller",
+				"src/classes/Invoice_Controller.cls"
+			],
+			[
+				"invo",
+				"src/components/Invoice.component"
+			],
+			[
+				"un",
+				"src/components/unzip2.component"
+			],
+			[
+				"invoi",
+				"src/components/Invoice.component"
+			],
+			[
+				"aut",
+				"src/components/AutoComplete.component"
+			],
+			[
+				"metadataservice",
+				"src/classes/MetadataService.cls"
+			],
+			[
+				"metadatas",
+				"src/classes/MetadataService.cls"
+			],
+			[
+				"selec",
+				"src/classes/SelectOptionSorter.cls"
+			],
+			[
+				"stat",
+				"src/classes/SendStatusNote.cls"
+			],
+			[
+				"retr",
+				"src/classes/RetrieveExport.cls"
+			],
+			[
+				"retrievestartctrl",
+				"src/classes/RetrieveStartCtrl.cls"
+			],
+			[
+				"test_p",
+				"src/classes/Test_ProjectUtils.cls"
+			],
+			[
+				"create_",
+				"src/classes/Create_ProjectContract.cls"
+			],
+			[
+				"testutils",
+				"src/classes/TestUtils.cls"
+			],
+			[
+				"projectutils",
+				"src/classes/ProjectUtils.cls"
+			],
+			[
+				"pro",
+				"src/triggers/Project.trigger"
+			],
+			[
+				"proj",
+				"src/classes/ProjectUtils.cls"
+			],
+			[
+				"create_projectcontract",
+				"src/classes/Create_ProjectContract.cls"
+			],
+			[
+				"test_projectutils",
+				"src/classes/Test_ProjectUtils.cls"
+			],
+			[
+				"createprojectcontract_ext",
+				"src/classes/CreateProjectContract_Ext.cls"
+			],
+			[
+				"retre",
+				"src/classes/RetrieveGeneratorCtrl.cls"
+			],
+			[
+				"creat",
+				"src/classes/Create_ProjectContract.cls"
+			],
+			[
+				"testu",
+				"src/classes/TestUtils.cls"
+			],
+			[
+				"test_button_launch",
+				"src/classes/Test_Button_Launch.cls"
+			],
+			[
+				"timee",
+				"src/triggers/TimeEntry.trigger"
+			],
+			[
+				"teammemberhelper",
+				"src/classes/TeamMemberHelper.cls"
+			],
+			[
+				"teamm",
+				"src/triggers/TeamMember.trigger"
+			],
+			[
+				"projectuti",
+				"src/classes/ProjectUtils.cls"
+			],
+			[
+				"test_billingrulesandinvoices",
+				"src/classes/Test_BillingRulesAndInvoices.cls"
+			],
+			[
+				"scheduledbatchprojectupdate",
+				"src/classes/ScheduledBatchProjectUpdate.cls"
+			],
+			[
+				"testpr",
+				"src/classes/Test_ProjectUtils.cls"
+			],
+			[
+				"createpro",
+				"src/pages/CreateProjectContract.page"
+			],
+			[
+				"so",
+				"src/classes/SelectOptionSorter.cls"
+			],
+			[
+				"au",
+				"src/components/AutoComplete.component"
+			],
+			[
+				"test_timesheetoverview_controller",
+				"src/classes/Test_TimesheetOverview_Controller.cls"
+			],
+			[
+				"cases_view",
+				"src/classes/Case_View.cls"
+			],
+			[
+				"test_case_view",
+				"src/classes/Test_Case_View.cls"
+			],
+			[
+				"testtimeentrydayviewcon",
+				"src/classes/TestTimeEntryDayViewCon.cls"
+			],
+			[
+				"invoicegenerator",
+				"src/classes/InvoiceGenerator.cls"
+			],
+			[
+				"schemautils",
+				"src/classes/SchemaUtils.cls"
+			],
+			[
+				"testschemautils",
+				"src/classes/TestSchemaUtils.cls"
+			],
+			[
+				"accou",
+				"src/classes/AccountTriggerHandler.cls"
+			],
+			[
+				"contact",
+				"src/triggers/Contact.trigger"
+			],
+			[
+				"test_newstatusnotecontrollerext",
+				"src/classes/Test_NewStatusNoteControllerExt.cls"
+			],
+			[
+				"test_scopechange",
+				"src/classes/Test_ScopeChange.cls"
+			],
+			[
+				"testut",
+				"src/classes/TestUtils.cls"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 629.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 289.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

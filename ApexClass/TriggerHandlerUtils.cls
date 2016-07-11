@@ -1,6 +1,6 @@
 /* Class:       {{ api_name }}
  * Created On:  
- * Created by:  OpFocus Team
+ * Created by:  J. Pipkin (OpFocus, Inc)
  * Description: Handler class for all trigger functionality
  */
 

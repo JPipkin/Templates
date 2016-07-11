@@ -1,6 +1,6 @@
 /* Class:       {{ api_name }}
  * Created On:  
- * Created by:  OpFocus Team
+ * Created by:  J. Pipkin (OpFocus, Inc)
  * Description: Test class for Http Callout responses
  */
  

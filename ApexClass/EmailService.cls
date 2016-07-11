@@ -1,6 +1,6 @@
 /* Class:       EmailService
  * Created On:  
- * Created by:  OpFocus Team
+ * Created by:  J. Pipkin (OpFocus, Inc)
  * Description: Handler for sending emails in Apex. 
  *		+ If email deliverability is turned off in the organization:
  *			- if called from UI, display a message
@@ -13,6 +13,7 @@
 global class EmailService {
 
 	@TestVisible private static TestOptions testArgs = new TestOptions();
+	public static Boolean testingOverride = false;
 	public static Contact dummyContact {
 		get {
 			if(dummyContact==null){
@@ -37,27 +38,35 @@ global class EmailService {
 	private static ObjectType objType = ObjectType.SINGLE;
 	private static Boolean clearTargets = false;
 	private static Boolean deleteContact = false;
+	public static Boolean allOrNothing = true;
 
 	//callers 
 	//START----------------------------------------------------
-	global static void sendEmails(Object lstOfMail){
-		emailHandler(lstOfMail, false, false);
+	global static Object sendEmails(Object lstOfMail){
+		Object ret = emailHandler(lstOfMail, false, false);
+		allOrNothing = false;
+		return ret;
 	}
-	global static void sendEmails(Object lstOfMail, Boolean isMass){
-		emailHandler(lstOfMail, isMass, false);
+	global static Object sendEmails(Object lstOfMail, Boolean isMass){
+		Object ret = emailHandler(lstOfMail, isMass, false);
+		allOrNothing = false;
+		return ret;
 	}
 	global static Object rollback(Object lstOfMail, Boolean sendBack){
-		List<Messaging.SingleEmailMessage> retObj = (List<Messaging.SingleEmailMessage>) emailHandler(lstOfMail, false, true);
+		Object retObj = emailHandler(lstOfMail, false, true);
 		clearTargets = true;
 		if(deleteContact){
 			delete dummyContact;
 		}
 		if(sendBack){
-			return clearReturnEmailTargetIds(retObj);
+			Object ret = clearReturnEmailTargetIds(retObj);
+			allOrNothing = false;
+			return ret;
 		}
 		else{
-			emailHandler(lstOfMail, false, true);
-			return null;
+			allOrNothing = false;
+			return retObj;
+			//return null;
 		}
 	}
 
@@ -117,15 +126,21 @@ global class EmailService {
 			//check if transaction will cause limit to be reached and then send email
 			if(isMassEmail){
 				if(!testArgs.skipReserve)Messaging.reserveMassEmailCapacity(lstMailMass.size());
-				Messaging.sendEmail(lstMailMass);
+				if(!allOrNothing){
+					return Messaging.sendEmail(lstMailMass, allOrNothing);
+				}
+				Messaging.sendEmail(lstMailMass, allOrNothing);
 				return lstMailMass;
 			}
 			else{
 				if(!testArgs.skipReserve)Messaging.reserveSingleEmailCapacity(lstMailSingle.size());
 				SavePoint sp = Database.setSavePoint();
-				Messaging.sendEmail(lstMailSingle);
+				Messaging.SendEmailResult[] lstSer = Messaging.sendEmail(lstMailSingle,allOrNothing);
 				if(!clearTargets && isRollback){
 					Database.rollback(sp);
+				}
+				if(!allOrNothing){
+					return lstSer;
 				}
 				return lstMailSingle;
 			}
@@ -149,15 +164,19 @@ global class EmailService {
 			}
 			if(ex_msg.containsIgnoreCase('Single email is not enabled for your organization') ||
 				ex_msg.containsIgnoreCase('The organization is not permitted to send email')){
-				if(!Test.isRunningTest() || testArgs.overrideTestContext){
+				if(testingOverride){
+					return null;
+				}
+				if(!Test.isRunningTest() || testArgs.overrideTestContext ){
 					//Email deliverability is turned off
     				throwError('<u><br/><br/>Email deliverability has been turned off for this organization.<br/><br/></u>'.toUpperCase());
     			}
     			else{
     				//don't throw any error if context is test
-    				return null;
+    				return new Messaging.SendEmailResult[]{};
     			}
 			}
+			
 			//other exception, throw
 			throwError(ex_msg);
 			return null;

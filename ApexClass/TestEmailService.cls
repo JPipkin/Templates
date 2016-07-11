@@ -1,6 +1,6 @@
 /* Class:       TestEmailService
  * Created On:  
- * Created by:  OpFocus Team
+ * Created by:  J. Pipkin (OpFocus, Inc)
  * Description: 
  */
 
