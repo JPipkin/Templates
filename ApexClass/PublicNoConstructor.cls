@@ -4,6 +4,6 @@
  * Description: 
  */
  
-public class {{ api_name }} {
+public with sharing class {{ api_name }} {
 
 }

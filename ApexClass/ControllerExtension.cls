@@ -5,7 +5,7 @@
  */
 
  
-public class {{ api_name }} {
+public with sharing class {{ api_name }} {
 
 	private final {{ sobj }} {{ obj_var }};
 

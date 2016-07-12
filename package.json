@@ -1,33 +1,9 @@
 {
     "ApexTrigger" : [
         {
-            "name"          : "Trigger for Framework",
-            "file_name"     : "Trigger w Framework.trigger",
-            "description"   : "Trigger with Framework template",
-            "author"        : "John Pipkin",
-            "params"        : [ 
-                {   
-                    "name"          : "object_name",
-                    "description"   : "Object API Name",
-                    "default"       : "Object"
-                },
-                {   
-                    "name"          : "obj_abbrev",
-                    "description"   : "Apex Trigger API Name",
-                    "default"       : "objectAbbrev"
-                },
-                {   
-                    "name"          : "api_name",
-                    "description"   : "Apex Trigger API Name",
-                    "default"       : "[objectAbbrev]Trigger"
-                }
-                
-           ]
-        },
-        {
-            "name"          : "Trigger no Framework",
+            "name"          : "Trigger",
             "file_name"     : "trigger no framework.trigger",
-            "description"   : "Trigger no Framework template",
+            "description"   : "Trigger",
             "author"        : "John Pipkin",
             "params"        : [ 
                 {   
@@ -74,30 +50,6 @@
         }
     ],
     "ApexClass" :  [
-
-        {
-            "name"          : "After Class",
-            "file_name"     : "AfterClass.cls",
-            "description"   : "After Class template",
-            "author"        : "John Pipkin",
-            "params"        : [ 
-                {   
-                    "name"          : "object_name",
-                    "description"   : "Object API Name",
-                    "default"       : "Object"
-                },
-                {   
-                    "name"          : "api_name",
-                    "description"   : "Already created Trigger's objectAbbrev",
-                    "default"       : "[objectAbbrev]After"
-                },
-                {
-                    "name"          : "obj_var",
-                    "description"   : "3 letter postfix for 'current' and 'old' Variable for Trigger loops",
-                    "default"       : "objectAbbrev3Letter"
-                }
-           ]
-        },
         {
             "name"          : "Batchable",
             "file_name"     : "BatchClass.cls",
@@ -118,29 +70,6 @@
                     "name"          : "obj_var",
                     "description"   : "Object Variable",
                     "default"       : "Variable"
-                }
-           ]
-        },
-        {
-            "name"          : "Before Class",
-            "file_name"     : "BeforeClass.cls",
-            "description"   : "Before Class template",
-            "author"        : "John Pipkin",
-            "params"        : [ 
-                {   
-                    "name"          : "object_name",
-                    "description"   : "Object API Name",
-                    "default"       : "Object"
-                },
-                {   
-                    "name"          : "api_name",
-                    "description"   : "Already created Trigger's objectAbbrev",
-                    "default"       : "[objectAbbrev]Before"
-                },
-                {
-                    "name"          : "obj_var",
-                    "description"   : "3 letter postfix for 'current' and 'old' Variable for Trigger loops",
-                    "default"       : "objectAbbrev3Letter"
                 }
            ]
         },
@@ -236,6 +165,19 @@
            ]
         },
         {
+            "name"          : "Interface",
+            "file_name"     : "Interface.cls",
+            "description"   : "Public Interface",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                }
+           ]
+        },
+        {
             "name"          : "Public No Constructor",
             "file_name"     : "PublicNoConstructor.cls",
             "description"   : "Public with No Constructor Class",
@@ -245,11 +187,6 @@
                     "name"          : "api_name",
                     "description"   : "Class Name",
                     "default"       : "ClassName"
-                },
-                {   
-                    "name"          : "today",
-                    "description"   : "Date stamp",
-                    "default"       : "No Input needed"
                 }
            ]
         },
@@ -405,6 +342,19 @@
                     "name"          : "batch_class",
                     "description"   : "Batch Class Name",
                     "default"       : "BatchClassName"
+                }
+           ]
+        },
+        {
+            "name"          : "Virtual",
+            "file_name"     : "Virtual.cls",
+            "description"   : "Virtual Class",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
                 }
            ]
         },

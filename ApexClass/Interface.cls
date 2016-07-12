@@ -3,11 +3,8 @@
  * Created by:  J. Pipkin (OpFocus, Inc)
  * Description: 
  */
- 
-public with sharing class {{ api_name }} {
 
-	
-	public {{ api_name }}() {
-		
-	}
+public interface {{ api_name }} {
+
+	Object operation();
 }

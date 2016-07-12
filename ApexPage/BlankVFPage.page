@@ -1,3 +1,9 @@
-<apex:page>
-
+<!-- 
+**	Created By: J. Pipkin (OpFocus, Inc)
+**	Created On: 
+**	Description:
+ -->
+<apex:page docType='html-5.0'>
+	<apex:includeScript value="/soap/ajax/36.0/connection.js"/>
+	<apex:includeScript value="/soap/ajax/36.0/apex.js"/>
 </apex:page>
