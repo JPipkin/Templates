@@ -1,7 +1,7 @@
 /*
 ** Trigger: {{ api_name }}
 ** SObject: {{ object_name }}
-** Created by OpFocus on 
+** Created by J. Pipkin (OpFocus, Inc) on 
 ** Description: 
 **		+ 
 */
