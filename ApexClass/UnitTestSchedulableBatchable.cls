@@ -13,18 +13,18 @@ public class {{ api_name }} {
  
     //test methods
  
-    static testMethod void myTest1() {
+    //static testMethod void myTest1() {
        
-        Test.startTest();
+    //    Test.startTest();
 
-        {{ batch_class }}.manual();
+    //    {{ batch_class }}.manual();
 
-        Test.stopTest();
+    //    Test.stopTest();
    
-    }
+    //}
    
  
-    static testMethod void scheduleBatch() {
-        {{ batch_class }}.schedule();
-    }
+    //static testMethod void scheduleBatch() {
+    //    {{ batch_class }}.schedule();
+    //}
 }
