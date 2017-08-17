@@ -334,11 +334,6 @@
                     "default"       : "TestClassName"
                 },
                 {  
-                    "name"          : "schd_class",
-                    "description"   : "Schedulable Class Name",
-                    "default"       : "SchedulableClassName"
-                },
-                {  
                     "name"          : "batch_class",
                     "description"   : "Batch Class Name",
                     "default"       : "BatchClassName"
