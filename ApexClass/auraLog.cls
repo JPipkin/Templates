@@ -24,7 +24,7 @@ public with sharing class {{ api_name }} {
 		return o;
 	}
 
-	public class Output extends ltngfw.Log.AuraReturn {
+	public class Output extends ltngfw.AuraReturn {
 		
 	}
 
