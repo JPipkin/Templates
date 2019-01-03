@@ -51,6 +51,32 @@
     ],
     "ApexClass" :  [
         {
+            "name"          : "Aura Controller w/ Log",
+            "file_name"     : "auraLog.cls",
+            "description"   : "Aura Controller w/ ltngfw",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                }
+           ]
+        },
+        {
+            "name"          : "Aura Controller NO Log",
+            "file_name"     : "aura.cls",
+            "description"   : "Aura Controller NO ltngfw",
+            "author"        : "John Pipkin",
+            "params"        : [ 
+                {   
+                    "name"          : "api_name",
+                    "description"   : "Class Name",
+                    "default"       : "ClassName"
+                }
+           ]
+        },
+        {
             "name"          : "Batchable",
             "file_name"     : "BatchClass.cls",
             "description"   : "Batchable Class",
