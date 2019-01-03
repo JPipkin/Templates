@@ -11,7 +11,7 @@ public with sharing class {{ api_name }} {
 		Output o = new Output();
 		{{ api_name }}.Input i;
 		try{
-			i = ({{ api_name }}.Input) ltnfw.AuraInput.deserialize(datajson, {{ api_name }}.Input.class);
+			i = ({{ api_name }}.Input) ltngfw.AuraInput.deserialize(datajson, {{ api_name }}.Input.class);
 
 			if(Test.isRunningTest()){
 				Decimal d = 1/0;
@@ -19,7 +19,7 @@ public with sharing class {{ api_name }} {
 		}
 		catch(Exception e){
 			String di = i == null ? '{}' : (i.deviceInfoStr == null ? '{}' : i.deviceInfoStr);
-			ltngfw.Log.notify(e, '{{ api_name }}.doInit', ltnfw.DeviceInformation.deserialize(di));
+			ltngfw.Log.notify(e, '{{ api_name }}.doInit', ltngfw.DeviceInformation.deserialize(di));
 		}
 		return o;
 	}
