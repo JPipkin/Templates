@@ -18,6 +18,7 @@ public with sharing class {{ api_name }} {
 	//		}
 	//	}
 	//	catch(Exception e){
+	//		o.handleException(e);
 	//		String di = i == null ? '{}' : (i.deviceInfoStr == null ? '{}' : i.deviceInfoStr);
 	//		ltngfw.Log.notify(e, '{{ api_name }}.doInit', ltngfw.DeviceInformation.deserialize(di));
 	//	}
